@@ -1128,10 +1128,36 @@
         <a class="btn-main" href="#ind-tag_iframe">Volver al Índice &#x2b06;&#xfe0f;</a>
       </span></h2>
       <article>
-        
+        <p>Define un contenedor para un contexto de navegación anidado: puede incluir una página web dentro de otra página web. (Traducido con DeepL) <a href="https://htmlreference.io/element/iframe/">Tag iframe - htmlreference.io</a></p>
+        <p>La etiqueta &lt;iframe&gt; en HTML se utiliza para insertar contenido de otra página web dentro de una página existente. Es similar a la etiqueta <span class="bold">&lt;embed&gt;</span> , pero tiene un mayor soporte en los navegadores y dispositivos. La etiqueta se utiliza dentro de una etiqueta <span class="bold">&lt;body&gt;</span> y requiere un atributo “src” que especifica la ubicación de la página web que se va a insertar. <a href="https://oregoom.com/html/iframe/">Etiqueta &lt;iframe&gt;</a>.</p>
+        <p>Además, el contenido dentro del iframe es completamente independiente del contenido fuera del iframe, por lo que los estilos CSS y scripts JavaScript no se aplicarán al contenido dentro del iframe a menos que se especifique de forma explícita. <a href="https://oregoom.com/html/iframe/">Etiqueta &lt;iframe&gt;</a>.</p>
+        <h3>Atributos de Tag iframe</h3>
+        <h4>1. src (<span class="required">required</span>)</h4>
+        <p><span class="bold">src:</span> 1. Define la URL de la página web anidada. Puede escribir cualquier URL. Tenga en cuenta que algunos sitios web no permitirán ser iframed. (Traducido con DeepL) <a href="https://htmlreference.io/element/iframe/">Tag iframe - htmlreference.io</a>.</p>
+        <p>2. Este atributo especifica la ubicación de la página web que se va a insertar en la página actual. Es obligatorio especificar un valor para este atributo. <a href="https://oregoom.com/html/iframe/">Etiqueta &lt;iframe&gt;</a>.</p>
+        <h4>2. allowfullscreen</h4>
+        <p><span class="bold">allowfullscreen:</span> 1. Permite al navegador mostrar el iframe en pantalla completa con JavaScript. <i>--No se requiere ningún valor.--</i> (Traducido con DeepL) <a href="https://htmlreference.io/element/iframe/">Tag iframe - htmlreference.io</a>.</p>
+        <p>2. Define si el contenido del iframe se puede ver a pantalla completa <a href="https://oregoom.com/html/iframe/">Etiqueta &lt;iframe&gt;</a>.</p>
+        <h4>3. height</h4>
+        <p>Define la altura del iframe en píxeles. (traducido con deepl) <a href="https://htmlreference.io/element/iframe/">Tag iframe - htmlreference.io</a>.</p>
+        <h4>4. width</h4>
+        <p>Define el ancho del iframe en píxeles. (traducido con deepl) <a href="https://htmlreference.io/element/iframe/">Tag iframe - htmlreference.io</a>.</p>
+        <h4>5. name</h4>
+        <p><span class="bold">name:</span> Este atributo especifica el nombre del iframe, el cual se puede utilizar para hacer referencia a él desde otro lugar en la página web. <a href="https://oregoom.com/html/iframe/">Etiqueta &lt;iframe&gt;</a>.</p>
+        <h4>6. sandobox</h4>
+        <p><span class="bold">sandbox:</span> Este atributo proporciona una serie de restricciones para el contenido dentro del iframe, como no permitir ejecutar scripts, no permitir formularios, etc.</p>
+        <h4>7. seamless</h4>
+        <p><span class="bold">seamless:</span> Este atributo define si el borde y el scrollbar del iframe deben ser ocultos o no.</p>
+        <h4>7. scrolling</h4>
+        <p><span class="bold">scrolling:</span> Este atributo define si se mostrarán barras de desplazamiento en caso de que el contenido sea demasiado grande para el tamaño del iframe. Los valores posibles son “yes”, “no”, “auto”.</p>
+        <h4>8. srcdoc</h4>
+        <p><span class="bold">srcdoc:</span> Este atributo permite especificar el contenido HTML que se mostrará en el iframe, en lugar de cargarlo desde una URL.</p>
+        <h4>9. frameborder</h4>
+        <p><span class="bold"> frameborder:</span> Este atributo define si se mostrará un borde alrededor del iframe.</p>
       </article>
       <div class="block-code">
-
+        <pre><code>&lt;<span class="keyword">iframe</span> <span class="atributes">src</span>= <span class="value">"page_hola.html"</span> <span class="atributes">frameborder</span>=<span class="value">"1"</span>&gt;&lt;/<span class="keyword">iframe</span>&gt;<br>&lt;<span class="keyword"> iframe</span> <span class="atributes">src</span>="https://jonmircha.com/" <span class="atributes">frameborder</span>=<span class="value">"1"</span>&gt;&lt;<span class="keyword">/iframe</span>&gt;<br>&lt;<span class="keyword"> iframe</span> <span class="atributes">src</span>="https://facebook.com/" <span class="atributes">frameborder</span>=<span class="value">"1"</span>&gt;&lt;<span class="keyword">/iframe</span>&gt;<br><span class="comment">&lt;!--No funciona - Las social media por lo general lo remiten. --&gt;</span><br>&lt;<span class="keyword">iframe</span> <span class="atributes">src</span>=<span class="value">"media/emmet-cheat-sheet.pdf"</span> <span class="atributes"> frameborder</span>=<span class="value">"1"</span>&gt;&lt;<span class="keyword">/iframe</span>&gt;<br>&lt;<span class="keyword">iframe</span> <span class="atributes">src</span>= <span class="value"> "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.558822453498!2d-74.80055502582434!3d10.99663515509502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d7682e1a887%3A0x3639be1de8d903e9!2sCl.%2068%20%2353-45%2C%20Nte.%20Centro%20Historico%2C%20Barranquilla%2C%20Atl%C3%A1ntico!5e0!3m2!1ses-419!2sco!4v1692677143765!5m2!1ses-419!2sco"</span> <span class="atributes">width</span>=<span class="value"> "600"</span> <span class="atributes">height</span>=<span class="value"> "450"</span> <span class="atributes">style</span>=<span class="value"> "border:0;"</span> <span class="atributes">allowfullscreen</span>=<span class="value"> ""</span> <span class="atributes">loading</span>=<span class="value"> "lazy"</span> <span class="atributes">referrerpolicy</span>=<span class="value"> "no-referrer-when-downgrade"</span>&gt;&lt;/<span class="keyword">iframe</span>&gt;<br>&lt;<span class="keyword">iframe</span> <span class="atributes"> width</span>=<span class="value">"560"</span> <span class="atributes"> height</span>=<span class="value">"315"</span> <span class="atributes"> src</span>= <span class="value">"https://www.youtube.com/embed/F55LNTW3GE0"</span> <span class="atributes"> title</span>= <span class="value">"YouTube video player"</span>  <span class="atributes"> frameborder</span>= <span class="value">"0"</span> <span class="atributes"> allow</span>= <span class="value"> "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"</span> <span class="atributes"> allowfullscreen</span>&gt;&lt;/<span class="keyword">iframe</span>&gt;
+        </code></pre>
       </div>
       <fieldset class="tag_text">
         <iframe src="page_hola.html" frameborder="1"></iframe><br>
@@ -1141,8 +1167,8 @@
         <!-- <iframe src="media/emmet-cheat-sheet.pdf" frameborder="1"></iframe> -->
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.558822453498!2d-74.80055502582434!3d10.99663515509502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d7682e1a887%3A0x3639be1de8d903e9!2sCl.%2068%20%2353-45%2C%20Nte.%20Centro%20Historico%2C%20Barranquilla%2C%20Atl%C3%A1ntico!5e0!3m2!1ses-419!2sco!4v1692677143765!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/F55LNTW3GE0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
       </fieldset>
+    
     </section>
   </main>
 
