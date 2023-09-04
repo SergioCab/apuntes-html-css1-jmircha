@@ -1,0 +1,216 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* border: 0; */
+  
+}
+
+h1{
+  text-align: center;
+  margin: 5%;
+}
+
+main {
+  margin: 0% 5%;
+}
+
+h2, h3 {
+  margin-top: 2%;
+  margin-bottom: 0%;
+  text-align: center;
+}
+
+h4 {
+  color: #4466ff;
+  margin-top: 1%;
+}
+
+p {
+  margin: 1%;
+  text-align: justify;
+}
+
+pre {
+  /*Esta modificacion permite que block-code sea responsive */
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+img {
+  width: 100%;
+  object-fit: contain;
+}
+
+hr[class="hr_green"] {
+  border: medium solid green;
+  margin: 2rem;
+}
+
+hr {
+  border: 1px solid orange;
+}
+
+fieldset p, fieldset main{
+  margin: 0%;
+}
+
+.encabezado, .tag_text {
+  border: 1px solid red;
+}
+
+.encabezado > * {
+  text-align: center;
+  margin: 1%;
+  border: 1px solid black;
+  padding: auto;
+}
+
+.indice p a {
+  text-decoration: none;
+}
+
+.estructura {
+  margin: 2% 0%;
+  width: 100%;
+  box-sizing: content-box;
+}
+
+.estructura > ol, .tag_ul li, .tag_audio_video li {
+  margin-left: 4%;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.block-code {
+  background-color: #272822;
+  overflow: auto;
+  color:#eeeeee;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 2%;
+  margin: 2% 0%;
+}
+
+.doctype {
+  color: #8292a2;
+  font-weight: 700;
+}
+
+.keyword {
+  color: #f92672;
+  font-weight: 700;
+}
+
+.keyword-react {
+  color: #66d9ef;
+  font-style: italic;
+}
+
+.atributes {
+  color: #a6e22e;
+  font-weight: 700;
+}
+
+.atributes-react {
+  color: #a6e26c;
+}
+
+.value {
+  color:#e6db74;
+}
+
+.comment {
+  color: green;
+  font-weight: 700;
+}
+
+.span-btn {
+  display: inline-block;
+  width: fit-content;
+}
+
+.btn-main {
+  color: blue;
+  text-decoration: none;
+}
+
+.element-line-block {
+  width: 100%;
+}
+.element-line-block,  
+.element-line-block th, 
+.element-line-block td {
+  border: 1px solid #000;
+  border-collapse: collapse;
+  padding: 1%;
+}
+
+.tag_img.list, 
+.article_img li, 
+.div_ol li, 
+.container_saint_seiya div {
+  margin-left: 2%;
+}
+
+.div_ol h4, .div_ul h4 {
+  color: #444445;
+}
+
+.tag_text.ol,
+.tag_text.ul,
+.container_saint_seiya {
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.div_ol, .div_ul {
+  width: 50%;
+  margin-bottom: 2%;
+}
+
+.div_ol, .div_ul, .tag_audio_video {
+  list-style-position: inside;
+}
+.tag_table .bold.a {
+  color: #353535 ;
+}
+
+.table_attributes {
+  width: 100%;
+}
+
+.table_attributes, .table_attributes th, .table_attributes td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.first_column {
+  min-width: 90px;
+}
+
+.second_column {
+  min-width: 180px;
+}
+
+.container_saint_seiya {
+  justify-content: space-around;
+}
+
+.container_saint_seiya div {
+  margin: 1%;
+}
+
+.tag_anchor > a > img {
+  width: auto;
+  max-height: 100%;
+}
+
+.bgcolor {
+  background-color: #deff82;
+}
+
+.required {
+  color: #ff4400;
+}

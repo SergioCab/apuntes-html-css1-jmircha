@@ -1,0 +1,1677 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Apuntes de HTML</title>
+</head>
+<body>
+  <header>
+    <h1>Apuntes del Curso de HTML - JON MIRCHA</h1>
+  </header>
+  <main>
+    <section id="indice" class="indice">
+      <h2>Contenido</h2>
+      <p id="ind-estructura">1. <a href="#estructura">Estructura General del Documento HTML.</a></p>
+      <p id="ind-html_tag">2. <a href="#html_tag">Etiqueta HTML y el atributo lang.</a></p>
+      <p id="ind-tag_doctype">3. <a href="#tag_doctype">Etiqueta &lt;!DOCTYPE&gt;.</a></p>
+      <p id="ind-meta_charset">4. <a href="#meta_charset">Atributo charset.</a></p>
+      <p id="ind-meta_viewport">5. <a href="#meta_viewport">Etiqueta &lt;meta&gt; - Viewport.</a></p>
+      <p id="ind-tag_title">6. <a href="#tag_title">Etiqueta &lt;title&gt; y atributo description.</a></p>
+      <p id="ind-tag_h1">7. <a href="#tag_h1">Etiqueta &lt;h1&gt;...&lt;h6&gt; - Encabezados</a></p>
+      <p id="ind-text_basic">8. <a href="#text_basic">Etiquetas de texto básicos.</a></p>
+      <p id="ind-text_semantic">9. <a  href="#text_semantic">Etiquetas de texto semánticos.</a></p>
+      <p id="ind-tag_br">10. <a href="#tag_br">Etiquetas de salto.</a></p>
+      <p id="ind-tag_format">11. <a href="#tag_format">Etiquetas de formateo.</a></p>
+      <p id="ind-tag_structures">12. <a href="#tag_structures">Etiquetas de semantica estructurales.</a></p>
+      <p id="ind-tag_line_block">13. <a href="#tag_line_block">Elementos de linea y de bloque - tabla periodica html</a></p>
+      <p id="ind-tag_style">14. <a href="#tag_style">Etiqueta &lt;style&gt; - estilos en el HTML </a></p>
+      <p id="ind-tag_script">15. <a href="#tag_script">Etiqueta &lt;script&gt; - Javascript.</a></p>
+      <p id="ind-tag_img">16. <a href="#tag_img">Etiqueta &lt;img&gt; Imagenes y Vectores.</a></p>
+      <p id="ind-tag_figure">17. <a href="#tag_figure">Etiquetas de Figuras - &lt;figure&gt;, &lt;figcaption&gt;.</a></p>
+      <p id="ind-tag_ol">18. <a href="#tag_ol">Etiqueta de lista ordenada &lt;ul&gt;...&lt;li&gt;.</a></p>
+      <p id="ind-tag_ul">19. <a href="#tag_ul">Etiqueta de lista desordenada &lt;ol&gt;...&lt;li&gt;.</a></p>
+      <p id="ind-tag_dl">20. <a href="#tag_dl">Etiqueta lista de definición &lt;dt&gt;...&lt;dd&gt;.</a></p>
+      <p id="ind-tag_table">21. <a href="#tag_table">Etiquetas de tablas &lt;table&gt;&lt;&lt;thead&gt;tbody&gt;&lt;th&gt;&lt;tr&gt;&lt;td&gt;. </a></p>
+      <p id="ind-tag_anchor">22. <a href="#tag_anchor">Etiqueta de enlance o ancla. &lt;a&gt; </a></p>
+      <p id="ind-tag_anchor_inner">23. <a href="#tag_anchor_inner">Enlaces internos &lt;a href="".&gt; </a></p>
+      <p id="ind-tag_anchor_special_protocols">24. <a href="#tag_anchor_special_protocols">Enlaces y protocolos especiales. </a></p>
+      <p id="ind-tag_interactive_elements">25. <a href="#tag_interactive_elements">Etiquetas interactivas &lt;button&gt; &lt;dialog&gt; &lt;details&gt;</a></p>
+      <p id="ind-tag_audio_video">26. <a href="#tag_audio_video">Etiquetas de audio y video &lt;audio&gt;&lt;video&gt;</a></p>
+      <p id="ind-tag_iframe">27. <a href="#tag_iframe">Etiquetas &lt;iframe&gt;</a></p>
+      <p id="ind-tag_element_forms">28. <a href="#tag_element_forms">Etiquetas y Elementos de Formulario</a>.</p>
+      <p id="ind-tag_input_forms">29. <a href="#tag_input_forms">Atributos de Inputs y Formularios</a>.</p>
+      <p id="ind-tag_select_radio_checkbox">30. <a href="#tag_select_radio_checkbox">Atributos Select, Radio y Checkbox </a></p>
+      <p id="ind-">31. <a href="">Formulario de Contacto. </a></p>
+      <p id="ind-">32. <a href="">Data Atributtes.</a></p>
+      <p id="ind-">33. <a href="">Meta etiquetas para SEO y móviles.</a></p>
+      <p id="ind-">34. <a href="">Meta etiquetas para redes sociales</a></p>
+      <p id="ind-">35. <a href="">Accesibilidad Web</a></p>
+    </section>
+
+    <section class="main_apuntes">
+
+      <hr>
+      <div id="estructura" class="estructura">
+        <h2>1. Estructura General del Documento HTML. 
+          <span class="span-btn">
+          <a class="btn-main" href="#ind-estructura">Volver al Índice &#x2b06;&#xfe0f;</a>
+        </span></h2>
+        <div class="block-code">
+        <pre><code>&lt;<span class="doctype">!DOCTYPE html</span>&gt; <br>&lt;<span class="keyword">html</span> <span class="atributes">lang</span>="<span class="value">es</span>"&gt;<br>  &lt;<span class="keyword">head</span>&gt;<br>    &lt;<span class=keyword>meta</span> <span class="atributes">charset</span>="<span class="value">UTF-8</span>"&gt;<br>    &lt;<span class="keyword">meta</span> <span class="atributes">name</span>="<span class="value">viewport</span>" <span class="atributes">content</span>="<span class="value">width=device-width, initial-scale=1.0</span>"&gt;<br>    &lt;<span class="keyword">title</span>&gt;Titulo del Documento&lt;/<span class="keyword">title</span>&gt;<br>  &lt;/<span class="keyword">head</span>&gt;<br>  &lt;<span class="keyword">body</span>&gt;<br>    <b>...</b><br>  &lt;/<span class="keyword">body</span>&gt;<br>&lt;/<span class="keyword">html</span>&gt;
+        </code></pre></div>
+        <p>El documento <span class="bold"> HTML</span>  consta de dos partes:</p>
+        <ol>
+          <li>Cabeza (<span class="bold"> head</span>)</li>
+          <li>Cuerpo (<span class="bold"> body</span>)</li>
+        </ol>
+      </div>
+      
+      <hr>
+      <div id="html_tag" class="html_tag">
+        <article>
+          <h2>2. Etiqueta &lt;html&gt; y el atributo lang.
+            <span class="span-btn">
+              <a class="btn-main" href="#ind-html_tag">Volver al Índice &#x2b06;&#xfe0f;</a>
+            </span>
+          </h2>
+          <div class="block-code">
+            <pre><code> &lt;<span class="keyword">html</span> <span class="atributes">lang</span>="<span class="value">es</span>"&gt;...&lt;/<span class="keyword">html</span>&gt;</code></pre>
+          </div>
+          <p>Esta etiqueta engloba todo el contenido HTML. Esta etiqueta debe abrirse y debe cerrarse.
+          </p>
+          <p>El atributo "lang" indica al navegador el idioma que contiene la página web.</p>
+          
+
+        </article>
+      </div>
+      
+      <hr>
+      <div id="tag_doctype" class="tag_doctype">
+        <article>
+          <h2>3. Etiqueta &lt;!DOCTYPE&gt;.
+            <span class="span-btn">
+              <a class="btn-main" href="#ind-tag_doctype">Volver al Índice &#x2b06;&#xfe0f;</a>
+            </span>
+          </h2>
+          <div class="block-code">
+            <pre><code> &lt;<span class="doctype">!DOCTYPE html</span>&gt;</code></pre>
+          </div>
+          <p>Esta etiqueta especifica el tipo de documento y define la versión o estandar, que para el caso en uso es la version <span class="bold"> HTML5</span>.
+          </p>
+          
+        </article>
+      </div>
+      
+      <hr>
+      <div id="meta_charset" class="meta_charset">
+        <h2>4. Etiqueta &lt;meta&gt; charset.
+          <span class="span-btn">
+            <a class="btn-main" href="#ind-meta_charset">Volver al Índice &#x2b06;&#xfe0f;</a>
+          </span>
+        </h2>
+        <div class="block-code">
+        &lt;<span class=keyword>meta</span> <span class="atributes">charset</span>="<span class="value">UTF-8</span>"&gt;</div>
+        <p>El <span class="bold"> charset</span> define el juego de caracteres que usará el documento, UTF-8 es la codificación universal para soportar caracteres ajenos al inglés.</p>
+        <p>Esta etiqueta permite agregar o visualizar caracteres especiales.</p>
+        <p><span class="bold"> UTF-8</span> tiene 128 caracteres.</p>
+        <p><span class="bold"> Dato importante: </span>Si bien el código ASCII permite desplegar caracteres de forma correcta en el Inglés, no ofrece soporte para otros lenguajes existentes como el Japonés.</p>
+        <p>Para solucionar este problema existe el código Unicode creado en 1987, y provee soporte para la mayoría de los caracteres existentes en los diferentes lenguajes. La ultima versión soporta 128,000 caracteres. De forma conveniente los primeros 128 caracteres de Unicode son el equivalente al código ASCII. -- Fuente: <a href="https://apuntes.de/golang/ascii-y-utf8/#gsc.tab=0">apuntes.de programador - ASCII Y UTF-8</a></p>
+        <figure>
+          <img src="assets/Codigo-ASCII-min-e1523384955302.jpg" alt="tabla ascii">
+        </figure>
+      </div>
+
+      <hr>
+      <div id="meta_viewport" class="meta_viewport">
+        <h2>5. Etiqueta meta viewport.
+          <span class="span-btn">
+            <a class="btn-main" href="#ind-meta_viewport">Volver al Índice &#x2b06;&#xfe0f;</a>
+          </span>
+        </h2>
+        <div class="block-code">
+        &lt;<span class=keyword>meta</span> <span class="atributes">name</span>="<span class="value">viewport</span>"  <span class="atributes">content</span>="<span class="value">width=device-width, initial-scale=1.0</span>"&gt;</div>
+        <p>la meta etiqueta <span class="bold"> viewport</span>  define como se visualizará el contenido en cualquier dispositivo, sea móvil, tableta, computadora de escritorio. Esta etiqueta es fundamental cuando hacemos diseño responsivo.</p>
+        <p>Con el atributo <span class="bold"> name</span> (nombre en español) se indica la zona visible del navegador donde se visualiza o se renderiza  el html.</p>
+        <p>Con el atributo <span class="bold"> content</span> (contenido en español) se indica el contenido de referencia, con ella podemos adaptar el ancho del documento html al ancho del dispositivo (movil, tablet, laptop, etc).</p>
+      </div>
+
+      <hr>
+      <div id="tag_title" class="tag_title">
+        <h2>6. Etiqueta &lt;title&gt; y etiqueta &lt;meta&gt; attribute description.
+          <span class="span-btn">
+            <a class="btn-main" href="#ind-tag_title">Volver al Índice &#x2b06;&#xfe0f;</a>
+          </span>
+        </h2>
+        <div class="block-code">
+          <pre><code>&lt;<span class=keyword>title</span>&gt;Etiqueta title&lt;/<span class=keyword>title</span>&gt; </code></pre>
+        </div>
+        <p>La etiqueta <span class="bold">title</span> representa el título de nuestro documento, éste se ve en la pestaña del navegador, también es el texto que se ve en los resultados de motores de búsqueda, el título no debe exceder los 65 carácteres. <span class="bold">Importante:</span> Esta etiqueta debe abrirse y debe cerrarse.</p>
+        <div class="block-code">&lt;<span class=keyword>meta</span> <span class="atributes">name</span>="<span class="value">description</span>"  <span class="atributes">content</span>="<span class="value">descripción del documento.</span>"/&gt;</div>
+        <p>La meta etiqueta <span class="bold"> description</span>, es una breve descripción del contenido que se encontrará en el documento, también aparece en los resultados de los motores de búsqueda, debajo del enlace del resultado, no debe exceder los 165 caracteres.</p>
+      </div>
+
+      <hr>
+      <div id="tag_h1" class="tag_h1">
+        <h2>7. Encabezados - Etiquetas &lt;h1&gt; ... &lt;h6&gt;.
+          <span class="span-btn">
+            <a class="btn-main" href="#ind-tag_h1">Volver al Índice &#x2b06;&#xfe0f;</a>
+          </span>
+        </h2>
+        <div class="block-code">
+          <pre><code>&lt;<span class=keyword>h1</span>&gt;Encabezado 1&lt;/<span class=keyword>h1</span>&gt;<br>&lt;<span class=keyword>h2</span>&gt;Encabezado 2&lt;/<span class=keyword>h2</span>&gt;<br>&lt;<span class=keyword>h3</span>&gt;Encabezado 3&lt;/<span class=keyword>h3</span>&gt;<br>&lt;<span class=keyword>h4</span>&gt;Encabezado 4&lt;/<span class=keyword>h4</span>&gt;<br>&lt;<span class=keyword>h5</span>&gt;Encabezado 5&lt;/<span class=keyword>h5</span>&gt;<br>&lt;<span class=keyword>h6</span>&gt;Encabezado 6&lt;/<span class=keyword>h6</span>&gt;</code></pre>
+        </div>
+        <p>Se utilizan para definir encabezados (títulos) de texto. El número indica la jerarquía, siendo <span class="bold">h1</span> el título principal y <span class="bold">h6</span> el de menor importancia.</p>
+        <p>Se recomienda que sólo exista un título principal por documento como una buena práctica de <span class="bold"> SEO (Search Engine Optimization).</span></p>
+        <p>Puedes tener tantos <span class="bold">h2, h3, h4, h5</span> y <span class="bold">h6</span> como requiera la jerarquía textual de tu contenido.</p>
+        <fieldset class="encabezado">
+          <h1>Encabezado 1</h1>
+          <h2>Encabezado 2</h2>
+          <h3>Encabezado 3</h3>
+          <h4>Encabezado 4</h4>
+          <h5>Encabezado 5</h5>
+          <h6>Encabezado 6</h6>
+        </fieldset>
+      </div>
+
+      <hr>
+      <div id="text_basic" class="text_basic">
+        <h2>8. Etiquetas de texto básico. <span class="span-btn">
+          <a class="btn-main" href="#ind-text_basic">Volver al Índice &#x2b06;&#xfe0f;</a>
+        </span></h2>
+        <div class="block-code">
+          <pre><code>&lt;<span class=keyword>p</span>&gt;Paragraph - Soy un parrafo.&lt;/<span class=keyword>p</span>&gt;<br>&lt;<span class=keyword>p</span>&gt;Palabras en: <br>   &lt;<span class="keyword">b</span>&gt;negrita&lt;/<span class="keyword">b</span>&gt;;<br>   &lt;<span class="keyword">i</span>&gt; en italica&lt;/<span class="keyword">i</span>&gt;;<br>   &lt;<span class="keyword">u</span>&gt; subrayado &lt;/<span class="keyword">u</span>&gt;;<br>   e = mc &lt;<span class="keyword">sup</span>&gt;2&lt;/<span class="keyword">sup</span>&gt;;<br>   H&lt;<span class="keyword">sub</span>&gt;2&lt;/<span class="keyword">sub</span>&gt;O;<br>   &lt;<span class="keyword">mark</span>&gt;marcatexto&lt;/<span class="keyword">mark</span>&gt;;<br>   &lt;<span class="keyword">small</span>&gt;letras pequeñas&lt;/<span class="keyword">small</span>&gt;<div class="br"></div>&lt;/<span class=keyword>p</span>&gt;</code></pre>
+        </div>
+        <fieldset class="tag_text">
+          <p><span class="bold">Paragraph</span> - Soy un parrafo.</p>
+          <p>Palabras en <b>negrita</b>, <i>italica</i>, <u>subrayado</u>, e = mc<sup>2</sup>, H<sub>2</sub>O, <mark>marcatexto</mark>, <small>letras pequeñas.</small> </p>
+        </fieldset>
+      </div>
+
+      <hr>
+      <div id="text_semantic" class="text_semantic">
+        <h2>9. Etiquetas de texto semanticas.
+          <span class="span-btn">
+            <a class="btn-main" href="#ind-text_semantic">Volver al Índice &#x2b06;&#xfe0f;</a>
+          </span>
+        </h2>
+        <div class="block-code">
+          <pre><code>&lt;<span class=keyword>p</span>&gt;</span>&lt;<span class="keyword">strong</span>&gt;Este texto es importante - etiqueta strong&lt;/<span class="keyword">strong</span>&gt;&lt;/<span class=keyword>p</span>&gt;<br>&lt;<span class=keyword>p</span>&gt;</span>&lt;<span class="keyword">em</span>&gt;Este texto hace enfasis - etiqueta em&lt;/<span class="keyword">em</span>&gt;&lt;/<span class=keyword>p</span>&gt;<br></code></pre>
+        </div>
+        <fieldset class="tag_text">
+          <p><strong>Este texto es importante - etiqueta strong</strong></p>
+          <p><em>Este texto hace enfasis - etiqueta em</em></p>
+        </fieldset>
+      </div>
+
+      <hr>
+      <div id="tag_br" class="tag_br">
+        <h2>10. Etiquetas de Salto. <span class="span-btn">
+          <a class="btn-main" href="#ind-tag_br">Volver al Índice &#x2b06;&#xfe0f;</a>
+        </span></h2>
+        <div class="block-code">
+          <pre><code>&lt;<span class=keyword>br</span>&gt; <span class="bold">Break</span> produce un salto de linea. - También se escribe así &lt;<span class="keyword">br</span> /&gt;<br>&lt;<span class="keyword">hr</span>&gt; Representa un cambio de tema entre parrafos; se representa con una linea horizontal. - También se escribe así &lt;<span class="keyword">hr</span> /&gt;
+          </code></pre>
+        </div>
+
+        <fieldset class="tag_text">
+          <p><span class="bold">Tag </span>&lt;br&gt;&lt;br&gt; - Aqui hay dos (2) saltos de linea porque hay 2 tag &lt;br&gt;. <br><br></p>
+          <p><span class="bold">Tag </span>&lt;hr&gt; - Aqui abajo se muestra la linea horizontal.</p>
+          <hr class="hr_green">
+          <p>Soy un parrafo 1- I'm a paragraph 1</p>
+          <hr class="hr_green">
+          <p>Soy un parrafo 2- I'm a paragraph 2</p>
+        </fieldset>
+      </div>
+
+      <hr>
+      <div id="tag_format" class="tag_format">
+        <h2>11. Etiquetas de formateo. <span class="span-btn">
+          <a class="btn-main" href="#ind-tag_format">Volver al Índice &#x2b06;&#xfe0f;</a>
+        </span></h2>
+        <div class="block-code">
+          <pre><code>&lt;<span class=keyword>pre</span>&gt; <span class="comment">&lt;!-- Esta es una etiqueta de pre-formateo --&gt;</span><br>    &lt;<span class=keyword>code</span>&gt;<span class="comment">&lt;!-- Esto es una etiqueta de bloque de código --&gt;</span><br><br>   <span class="keyword-react">import</span> React<span class="keyword-react"> from</span> <span class="atributes-react">"react"</span>;<br>   <span class="keyword-react">import</span> Title<span class="keyword-react"> from</span><span class="atributes-react"> "&#x2705;title"</span>;<br><br>   <span class="keyword-react">function</span> App {
+            &lt;<span class="value">Title</span>/&gt;<span class="value">less-than(<); greater-than(>)</span>}<br>    &lt;<span class=keyword>code</span>&gt;<br>&lt;<span class=keyword>pre</span>&gt;
+          </code></pre>
+        </div>
+      </div>
+
+      <hr>
+      <div id="tag_structures" class="tag-structures">
+        <h2>12. Etiquetas semanticas estructurales. <span class="span-btn">
+          <a class="btn-main" href="#ind-tag_structures">Volver al Índice &#x2b06;&#xfe0f;</a>
+        </span></h2>
+        <div class="block-code">
+          &lt;<span class="keyword">div</span>&gt;Esta es una etiqueta contenedora que no tiene semantica.&lt;/<span class="keyword">div</span>&gt;<br><br>&lt;<span class="keyword">header</span>&gt;Esta es la cabecera de un sitio web o de una sección.&lt;/<span class="keyword">header</span>&gt;<br><br>&lt;<span class="keyword">main</span>&gt;Define la sección principal del documento, sólo puede existir una etiqueta main por documento.&lt;/<span class="keyword">main</span>&gt;<br><br>&lt;<span class="keyword">footer</span>&gt;Define el pie de página de un sitio web o sección.&lt;/<span class="keyword">footer</span>&gt;<br><br>&lt;<span class="keyword">nav</span>&gt;Representa una navegación.&lt;/<span class="keyword">nav</span>&gt;<br><br>&lt;<span class="keyword">article</span>&gt;Representa una sección autocontenida (qué por sí sola se explica).&lt;/<span class="keyword">article</span>&gt;<br><br>&lt;<span class="keyword">aside</span>&gt;Representa contenido complementario o secundario.&lt;/<span class="keyword">aside</span>&gt;<br><br>&lt;<span class="keyword">section</span>&gt;Representa una sección de contenido generico.&lt;/<span class="keyword">section</span>&gt;<br><br>&lt;<span class="keyword">address</span>&gt;Representa una información de contacto.&lt;/<span class="keyword">address</span>&gt;
+        </div>
+        <fieldset class="tag_text">
+          <div><span class="bold">&lt;p&gt;...&lt;/p&gt;</span> Esta es una etiqueta contenedora que no tiene semantica.</div>
+          <br>
+          <header><span class="bold">&lt;header&gt;...&lt;/header&gt;</span> Esta es la cabecera de un sitio web o de una sección.</header>
+          <br>
+          <main><span class="bold">&lt;main&gt;...&lt;/main&gt;</span>Define la sección principal del documento, sólo puede existir una etiqueta main por documento. <span class="comment">&lt;!-- Recuerda que en el documento style.css se asignó a margin-right y margin-left el valor de 5% --&gt;</span> </main>
+          <br>
+          <footer><span class="bold">&lt;footer&gt;...&lt;/footer&gt;</span> Define el pie de página de un sitio web o sección.</footer>
+          <br>
+          <nav><span class="bold">&lt;nav&gt;...&lt;/nav&gt;</span> Representa una navegación.</nav>
+          <br>
+          <article><span class="bold">&lt;article&gt;...&lt;/article&gt;</span> Representa una sección autocontenida (qué por sí sola se explica).</article>
+          <br>
+          <aside><span class="bold">&lt;aside&gt;...&lt;/aside&gt;</span> Representa contenido complementario o secundario.</aside>
+          <br>
+          <section><span class="bold">&lt;section&gt;...&lt;/section&gt;</span> Representa una sección de contenido generico.</section>
+          <br>
+          <address><span class="bold">&lt;address&gt;...&lt;/address&gt;</span> Representa una información de contacto.</address>
+        </fieldset>
+      </div>
+
+      <hr>
+      <div id="tag_line_block" class="tag_line_block">
+        <h2>13. Elementos de linea y de bloque - Tabla periodica de elementos HTML.
+          <span class="span-btn">
+            <a class="btn-main" href="#ind-tag_line_block">Volver al Índice &#x2b06;&#xfe0f;</a>
+          </span></h2>
+        <h3>13.1. Elementos de linea.</h3>
+        <p>Como su nombre mismo indica, los elementos inline son aquellos cuyo contenido se encuentra en una misma linea, de tal manera que que si colocamos dos o más elementos en linea sin expresar un salto de linea, estos elementos se presentarán uno seguido de otro en una misma linea.</p>
+        <h3>13.2. Elementos de Bloque.</h3>
+        <p>Los elementos de tipo bloque BLOCK son aquellos que se comportan como bloques, cada vez que se presenta un elemento de este tipo se hace un salto de linea de manera predeterminada sin la necesidad de colocar una etiqueta de salto de linea.</p>
+        <h3>13.3. Diferencia entre elementos de linea y de bloque.</h3>
+        <p>la diferencia es que los elementos html de linea no hacen salto de linea sino continúan en una misma linea si no se especifica un salto de linea, en cambio un elemento de tipo bloque empieza y termina en una linea.</p>
+        <div class="block-code">
+          <pre><code>&lt;<span class=keyword>div</span>&gt;La etiqueta de bloque por excelencia es la etiqueta <span class="bold">&lt;div&gt;...&lt;/div&gt;</span> una etiqueta de bloque es aquella que genera saltos de linea con sus etiquetas hermanas.&lt;/<span class=keyword>div</span>&gt;<br>&lt;<span class=keyword>p</span>&gt; Soy un parrafo - I'm a paragraph,&lt;<span class=keyword>span</span>&gt; La etiqueta de linea por excelencia es la etiqueta  <span class="bold">&lt;span&gt;...&lt;/span&gt;</span> que solo ocupa el espacio necesario que tiene su contenido.&lt;/<span class=keyword>span</span>&gt;&lt;/<span class=keyword>p</span>&gt;
+          </code></pre>
+        </div>
+        <fieldset class="tag_text">
+          <div>La etiqueta de bloque por excelencia es la etiqueta &lt;div&gt;...&lt;/&gt; una etiqueta de bloque es aquella que genera saltos de linea con sus etiquetas hermanas.</div><br>
+          <p>Soy un parrafo - I'm a paragraph,<span> La etiqueta de linea por excelencia es la etiqueta  &lt;span&gt;...&lt;/span&gt; que solo ocupa el espacio necesario que tiene su contenido.</span></p>
+        </fieldset>
+        <figure>
+          <img src="assets/periodic-table-of-html-elements.png" alt="Tabla de elementos HTML">
+        </figure>
+        <table class="element-line-block">
+          <thead>
+          <tr>
+          
+            <th colspan="2">Tabla de Elementos de etiquetas - tags HTML</th>
+          </tr>
+          <tr>
+            <th>Elementos de linea</th>
+            <th>Elementos de bloque</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Anchor - Etiqueta de enlace. &lt;a&gt;...&lt;/a&gt;</td>
+            <td>Division - elemento contenedor. &lt;div&gt;...&lt;/div&gt;</td>
+          </tr>
+          <tr>
+            <td>Code - Etiqueta para fragmentos de código.&lt;code&gt;...&lt;/code&gt; </td>
+            <td>Paragraph - parrafo &lt;p&gt;...&lt;/p&gt;</td>
+          </tr>
+          <tr>
+            <td>Emphasis - texto enfasis &lt;em&gt;...&lt;/em&gt; </td>
+            <td>H1 - Texto encabezado &lt;h1&gt;...&lt;/h1&gt;&lt;h2&gt;...&lt;/h2&gt;&lt;h3&gt;...&lt;/h3&gt;&lt;h4&gt;...&lt;/h4&gt;&lt;h5&gt;...&lt;/h5&gt;&lt;h6&gt;...&lt;/h6&gt;</td>
+          </tr>
+          <tr>
+            <td>Italic - Etiqueta para cursiva &lt;i&gt;...&lt;/i&gt;</td>
+            <td>Unordered List - lista desordenada &lt;ul&gt;...&lt;/ul&gt;</td>
+          </tr>
+          <tr>
+            <td>Image - Etiqueta para imágenes - &lt;img /&gt;</td>
+            <td>Ordered List - lista ordenada &lt;ol&gt;...&lt;/ol&gt;</td>
+          </tr>
+          <tr>
+            <td>Input - campos de formularios. &lt;input /&gt;</td>
+            <td>List Item - item de la lista &lt;li&gt;...&lt;li&gt;</td>
+          </tr>
+          <tr>
+            <td>Span - Fragmentos de contenido. &lt;span&gt;...&lt;/span&gt;</td>
+            <td>Table - tabla &lt;table&gt;...&lt;/table&gt;</td>
+          </tr>
+          <tr>
+            <td>Strong - texto fuerte.&lt;strong&gt;...&lt;/strong&gt;</td>
+            <td>Table Row - fila de la tabla &lt;tr&gt;...&lt;/tr&gt;</td>
+          </tr>
+          <tr>
+            <td>Sub - para texto subíndice. &lt;sub&gt;...&lt;/sub&gt;</td>
+            <td>Table Data - dato de la tabla &lt;td&gt;...&lt;/td&gt;</td>
+          </tr>
+          <tr>
+            <td>Sup - para texto superíndice</td>
+            <td>Descriptive List - lista descriptiva &lt;dl&gt;...&lt;/dl&gt;</td>
+          </tr>
+          <tr>
+            <td>Underline - para subrayar texto. &lt;u&gt;...&lt;/u&gt;</td>
+            <td>Definition - definicion de un elemento o valor de un item.</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Definition Term - definición de un termino &lt;dt&gt;...&lt;/dt&gt;</td>
+          </tr>
+        </tbody>
+        </table>
+        <p><a href="https://desarrolladoresweb.org/html/elementos-inline-y-block-en-html/">Ver articulo Desarrolladores Web - Inline - Block</a></p>
+      </div>
+
+      <hr>
+      <div id="tag_style" class="tag_style">
+        <h2>14. Etiqueta &lt;link&gt; y Etiqueta &lt;style&gt; - estilos en el HTML. <span class="span-btn">
+          <a class="btn-main" href="#ind-tag_style">Volver al Índice &#x2b06;&#xfe0f;</a>
+        </span></h2>
+        <div class="block-code">
+          <pre><code>&lt;<span class=keyword>style</span>&gt; <span class="comment"> /**Aquí va el codigo CSS **/</span><br><span class="atributes"> .box</span> {<br>    <span class="keyword-react">width</span>: 100px;<br>    <span class="keyword-react">height</span>: 100px;<br>    <span class="keyword-react">background-color</span>: pink;<br>    <span class="keyword-react">border</span>: 5px solid darkred;<br>    <span class="keyword-react">margin</span>: 0.5% auto;<br>  } <br>&lt;/<span class=keyword>style</span>&gt;<br>&lt;<span class="keyword">div</span> <span class="atributes"> class</span> ="<span class="value">box</span>"&gt;<br>   Soy una caja <br>&lt;/<span class="keyword">div</span>&gt;<br>...<br><span class="comment">&lt;!-- Etiqueta link css - Relaciona o enlaza el archivo CSS --&gt;</span><br>&lt;<span class="keyword">link</span> <span class="atributes">rel</span>="<span class="value">stylesheet</span>" <span class="atributes">href</span>="<span class="value">styles.css</span>"&gt;
+        </code></pre>
+        </div>
+        <fieldset class="tag_text">
+          <style>
+            .box {
+              width: 100px;
+              height: 100px;
+              background-color: pink;
+              border: 5px solid darkred;
+              margin: 0.5% auto;
+            } 
+          </style>
+          <div class="box">Soy una caja</div>
+        </fieldset>
+        <h3>14.1. Etiqueta &lt;style&gt;</h3>
+        <p>El elemento style contiene a un bloque de declaraciones de estilo. La información de estilo estará incrustada en el documento mismo, entre los tags de este elemento.</p>
+        <p>Ver más información: <a href="http://www.w3bai.com/es/tags/tag_style.html#gsc.tab=0">W3bai HTML Tag Style.</a></p>
+        <p>Ver más información: <a href="https://www.w3schools.com/tags/tag_style.asp">W3School tag style.</a></p>
+        <h3>14.2. Etiqueta &lt;link&gt;</h3>
+        <p>El elemento link solamente enlaza a la hoja de estilo como un recurso externo.</p>
+      </div>
+
+      <hr>
+      <div id="tag_script" class="tag_script">
+        <h2>15. Etiqueta &lt;script&gt; - Código Javascript.
+          <span class="span-btn">
+            <a class="btn-main" href="#ind-tag_script">Volver al Índice &#x2b06;&#xfe0f;</a>
+          </span></h2>
+        <div class="block-code">
+          <pre><code>&lt;<span class="keyword">script</span>&gt;<span class="comment">/*Aquí va el código javascript*/</span>&lt;/<span class="keyword">script</span>&gt;<br>&lt;<span class="keyword">script</span> <span class="atributes">src</span>="<span class="value">codigo.js</span>&gt;&lt;/<span class="keyword">script</span>&gt;</code></pre>
+        </div>
+      </div>
+
+      <hr>
+      <div id="tag_img" class="tag_img">
+        <h2>16. Etiqueta &lt;img&gt; - Vectores 
+          <span class="span-btn">
+            <a class="btn-main" href="#ind-tag_img">Volver al Índice &#x2b06;&#xfe0f;</a>
+          </span></h2>
+          <p>El elemento de imagen HTML &lt;img&gt; representa una imagen en el documento. Ver: <a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/img">MDN Etiqueta &lt;img&gt;</a></p>
+          <h3>16.1. Atributos</h3>
+          <article class="article_img">
+            <h4>1 - align.</h4>
+            <p>Alineamiento de la texto respecto al contexto que la rodea.</p>
+            <h4>2 - alt.</h4>
+            <p>Este atributo define el texto alternativo que describe la imagen, texto que los usuarios verán si la URL de la imagen es errónea o la imagen tiene un formato no soportado o si la imagen aún no se ha descargado.</p>
+            <p><span class="bold">Nota:</span> Omitir este atributo indica que la imagen es una parte clave del contenido, y no tiene equivalencia textual. Establecer este atributo como cadena vacía indica que la imagen no es una parte clave del contenido; los navegadores no gráficos pueden omitirlo.</p>
+            <h4>3 - border.</h4>
+            <p>Anchura del borde alrededor de la imagen.</p>
+            <h4>4 - height.</h4>
+            <p>La altura de la imagen en píxeles CSS en HTML5 o píxeles o como porcentaje en HTML4.</p>
+            <h4>5 - sizes.</h4>
+            <p>Una lista de una o más cadenas separadas por comas indicando el tamaño de la fuente. Cada tamaño de la fuente consiste en:</p>
+            <ol class="tag_img list">
+              <li><span class="bold">Codición de medios.</span> Debe omitirse en el último ítem.</li>
+              <li><span class="bold">Valor del tamaño.</span>El valor del tamaño de la fuente especifica el tamaño de la imagen incrustada.</li>
+            </ol>
+            <h4>6 - src</h4>
+            <p>La URL de la imagen. Este atributo es obligatorio para el elemento &lt;img&gt;.</p>
+            <h4>7 - width</h4>
+            <p>El ancho de la imagen en píxeles CSS en HTML5, o píxeles o porcentaje en HTML4.</p>
+        </article>
+        <div class="block-code">
+          <pre><code><span class="comment">&lt;!-- Imagen en formato .jpg--&gt;<br></span>&lt;<span class="keyword">img</span> <span class="atributes">src</span>="<span class="value">assets/hemisferios-cerebro.jpg</span>" <span class="atributes">alt</span>="<span class="value">Hemisferios del Cerebro</span>"&gt;<br><span class="comment">&lt;!-- Imagen en formato .png --&gt;<br></span>&lt;<span class="keyword">img</span> <span class="atributes">src</span>=" <span class="value">assets/diseno-interaccion.png" alt="Diseño de Interacción</span>"/&gt;<br><span class="comment">&lt;!-- Imagen en formato .gif --&gt;</span><br>&lt;<span class="keyword">img</span> <span class="atributes">src</span>="<span class="value">assets/this-is-fine.gif</span>" <span class="atributes">alt</span>="<span class="value">This is Fine</span>" /&gt;<br><span class="comment">&lt;!-- Imagen en formato .svg --&gt;</span><br>&lt;<span class="keyword">img</span> <span class="atributes">src</span>="<span class="value">assets/html5.svg</span>" <span class="atributes">alt</span>="<span class="value">HTML5</span>" /&gt;
+          </code></pre>
+        </div>
+        <fieldset class="tag_text">
+          <h3>Imagen en formato JPG</h3>
+          <img src="assets/hemisferios-cerebro.jpg" alt="Hemisferios del Cerebro.">
+          <h3>Imagen en formato PNG</h3>
+          <img src="assets/diseno-interaccion.png" alt="Diseño de interacción">
+          <h3>Imagen en formato GIF</h3>
+          <img src="assets/this-is-fine.gif" alt="gif this is fine">
+          <h3>Imagen en formato SVG</h3>
+          <img src="assets/html5.svg" alt="html5 en svg">
+        </fieldset>
+      </div>
+
+      <hr>
+      <div id="tag_figure" class="tag_figure">
+        <h2>17. Etiqueta figura &lt;figure&gt; y &lt;figcaption&gt;
+          <span class="span-btn">
+            <a class="btn-main" href="#ind-tag_figure">Volver al Índice &#x2b06;&#xfe0f;</a>
+          </span></h2>
+        <p><span class="bold">Etiqueta - tag &lt;figure&gt;</span> se utiliza para incluir elementos multimedia en una página web, como imágenes, videos, audio u otro contenido que se desee destacar.</p>
+        <p><span class="bold">&lt;figcaption&gt;</span> para proporcionar una leyenda o descripción para el contenido multimedia.</p>
+        <div class="block-code">
+          <pre><code>&lt;<span class="keyword">figure</span>&gt;<br>  &lt;<span class="keyword">img</span> <span class="atributes">src</span>="<span class="value"></span>" <span class="atributes">alt</span>=" <span class="value"></span>" &gt;<br>  &lt;<span class="keyword">figcaption</span>&gt;Aquí va el nombre de la imagen.&lt;/<span class="keyword">figcaption</span>&gt;<br>&lt;/<span class="keyword">figure</span>&gt;
+          </code></pre>
+        </div>
+        <fieldset class="tag_text">
+          <figure>
+            <img id="student-dev" class="student-dev" title="development student" src="assets/student-dev.jpg" alt="student-dev" width="400">
+            <figcaption>Student developer - Aquí va el nombre de la imagen.</figcaption>
+          </figure>
+        </fieldset>
+        <h4>Atributos de figure</h4>
+        <article class="article_img">
+          <ul>
+            <li><span class="bold">id:</span> permite identificar un elemento único en la página web para su posterior manipulación con JavaScript o CSS.</li>
+            <li><span class="bold">class: </span>se utiliza para asignar una o varias clases CSS al elemento.</li>
+            <li><span class="bold">style: </span>se utiliza para aplicar estilos CSS directamente al elemento.</li>
+            <li><span class="bold">title: </span>se utiliza para proporcionar información adicional sobre el contenido multimedia cuando se pasa el cursor sobre él.</li>
+            <li><span class="bold">lang: </span>se utiliza para especificar el idioma del contenido.</li>
+            <li><span class="bold">dir: </span>se utiliza para especificar la dirección de lectura del contenido.</li>
+            <li><span class="bold">tabindex: </span>se utiliza para especificar el orden de tabulación del elemento.</li>
+            <li><span class="bold">role: </span>se utiliza para especificar el papel del elemento en la página web para mejorar la accesibilidad.</li>
+          </ul>
+        </article>
+      </div>
+
+      <hr>
+      <div id="tag_ol" class="tag_ol">
+        <h2>18. Etiqueta &lt;ol&gt; - Listas Ordenadas - ordered list
+          <span class="span-btn">
+            <a class="btn-main" href="#ind-tag_ol">Volver al Índice &#x2b06;&#xfe0f;</a>
+          </span></h2>
+          <p>El elemento ol permite definir listas o viñetas ordenadas ("Ordered List"), bien con numeración o alfabéticamente.</p>
+        <div class="block-code">
+          <pre><code><span class="comment">&lt;!-- Lista --&gt;</span><br>&lt;<span class="keyword">h4</span>&gt;Estaciones del año&gt;/<span class="keyword">h4</span>&gt;<br>&lt;<span class="keyword">ol</span>&gt;<br>  &lt;<span class="keyword">li</span>&gt;Primavera.&lt;/<span class="keyword">li</span>&gt;<br>  &lt;<span class="keyword">li</span>&gt;Verano.&lt;/<span class="keyword">li</span>&gt;<br>  &lt;<span class="keyword">li</span>&gt;Otoño.&lt;/<span class="keyword">li</span>&gt;<br>  &lt;<span class="keyword">li</span>&gt;Invierno.&lt;/<span class="keyword">li</span>&gt;<br>&lt;/<span class="keyword">ol</span>&gt;<br><span class="comment">&lt;!-- Lista con atributo Start | list with start attribute --&gt;</span><br>&lt;<span class="keyword">h4</span>&gt;Estaciones del año&gt;/<span class="keyword">h4</span>&gt;<br>&lt;<span class="keyword">ol</span> <span class="atributes">start</span>="<span class="value">3</span>"&gt;<br>  &lt;<span class="keyword">li</span>&gt;Primavera.&lt;/<span class="keyword">li</span>&gt;<br>  &lt;<span class="keyword">li</span>&gt;Verano.&lt;/<span class="keyword">li</span>&gt;<br>  &lt;<span class="keyword">li</span>&gt;Otoño.&lt;/<span class="keyword">li</span>&gt;<br>  &lt;<span class="keyword">li</span>&gt;Invierno.&lt;/<span class="keyword">li</span>&gt;<br>&lt;/<span class="keyword">ol</span>&gt;<br><span class="comment">&lt;!-- Lista con atributo reversed | list with reversed attribute --&gt;</span><br>&lt;<span class="keyword">h4</span>&gt;Estaciones del año&gt;/<span class="keyword">h4</span>&gt;<br>&lt;<span class="keyword">ol</span> <span class="atributes">reversed</span>&gt;<br>  &lt;<span class="keyword">li</span>&gt;Primavera.&lt;/<span class="keyword">li</span>&gt;<br>  &lt;<span class="keyword">li</span>&gt;Verano.&lt;/<span class="keyword">li</span>&gt;<br>  &lt;<span class="keyword">li</span>&gt;Otoño.&lt;/<span class="keyword">li</span>&gt;<br>  &lt;<span class="keyword">li</span>&gt;Invierno.&lt;/<span class="keyword">li</span>&gt;<br>&lt;/<span class="keyword">ol</span>&gt;<br><span class="comment">&lt;!-- Lista con atributo type="1" | list with attribute type="1"--&gt;</span><br>&lt;<span class="keyword">h4</span>&gt;Estaciones del año&gt;/<span class="keyword">h4</span>&gt;<br>&lt;<span class="keyword">ol</span> <span class="atributes">type</span>="<span class="value">1</span>"&gt;<br>  &lt;<span class="keyword">li</span>&gt;Primavera.&lt;/<span class="keyword">li</span>&gt;<br>  &lt;<span class="keyword">li</span>&gt;Verano.&lt;/<span class="keyword">li</span>&gt;<br>  &lt;<span class="keyword">li</span>&gt;Otoño.&lt;/<span class="keyword">li</span>&gt;<br>  &lt;<span class="keyword">li</span>&gt;Invierno.&lt;/<span class="keyword">li</span>&gt;<br>&lt;/<span class="keyword">ol</span>&gt;<br><span class="comment">&lt;!-- Lista con atributo type="A" | list with attribute type="A" letras mayusculas--&gt;</span><br>&lt;<span class="keyword">h4</span>&gt;Estaciones del año&gt;/<span class="keyword">h4</span>&gt;<br>&lt;<span class="keyword">ol</span> <span class="atributes">type</span>="<span class="value">A</span>"&gt;<br>  &lt;<span class="keyword">li</span>&gt;Primavera.&lt;/<span class="keyword">li</span>&gt;<br>  &lt;<span class="keyword">li</span>&gt;Verano.&lt;/<span class="keyword">li</span>&gt;<br>  &lt;<span class="keyword">li</span>&gt;Otoño.&lt;/<span class="keyword">li</span>&gt;<br>  &lt;<span class="keyword">li</span>&gt;Invierno.&lt;/<span class="keyword">li</span>&gt;<br>&lt;/<span class="keyword">ol</span>&gt;<br><span class="comment">&lt;!-- Lista con atributo type="a" | list with attribute type="a" letras minusculas--&gt;</span><br>&lt;<span class="keyword">h4</span>&gt;Estaciones del año&gt;/<span class="keyword">h4</span>&gt;<br>&lt;<span class="keyword">ol</span> <span class="atributes">type</span>="<span class="value">a</span>"&gt;<br>  &lt;<span class="keyword">li</span>&gt;Primavera.&lt;/<span class="keyword">li</span>&gt;<br>  &lt;<span class="keyword">li</span>&gt;Verano.&lt;/<span class="keyword">li</span>&gt;<br>  &lt;<span class="keyword">li</span>&gt;Otoño.&lt;/<span class="keyword">li</span>&gt;<br>  &lt;<span class="keyword">li</span>&gt;Invierno.&lt;/<span class="keyword">li</span>&gt;<br>&lt;/<span class="keyword">ol</span>&gt;<br><span class="comment">&lt;!-- Lista con atributo type="I" | list with attribute type="I" números romanos letras mayusculas--&gt;</span><br>&lt;<span class="keyword">h4</span>&gt;Estaciones del año&gt;/<span class="keyword">h4</span>&gt;<br>&lt;<span class="keyword">ol</span> <span class="atributes">type</span>="<span class="value">I</span>"&gt;&gt;<br>  &lt;<span class="keyword">li</span>&gt;Primavera.&lt;/<span class="keyword">li</span>&gt;<br>  &lt;<span class="keyword">li</span>&gt;Verano.&lt;/<span class="keyword">li</span>&gt;<br>  &lt;<span class="keyword">li</span>&gt;Otoño.&lt;/<span class="keyword">li</span>&gt;<br>  &lt;<span class="keyword">li</span>&gt;Invierno.&lt;/<span class="keyword">li</span>&gt;<br>&lt;/<span class="keyword">ol</span>&gt;<br><span class="comment">&lt;!-- Lista con atributo type="i" | list with attribute type="i" números romanos letras minusculas--&gt;</span><br>&lt;<span class="keyword">h4</span>&gt;Estaciones del año&gt;/<span class="keyword">h4</span>&gt;<br>&lt;<span class="keyword">ol</span> <span class="atributes">type</span>="<span class="value">i</span>"&gt;<br>  &lt;<span class="keyword">li</span>&gt;Primavera.&lt;/<span class="keyword">li</span>&gt;<br>  &lt;<span class="keyword">li</span>&gt;Verano.&lt;/<span class="keyword">li</span>&gt;<br>  &lt;<span class="keyword">li</span>&gt;Otoño.&lt;/<span class="keyword">li</span>&gt;<br>  &lt;<span class="keyword">li</span>&gt;Invierno.&lt;/<span class="keyword">li</span>&gt;<br>&lt;/<span class="keyword">ol</span>&gt;<br></code></pre>
+        </div>
+        <fieldset class="tag_text ol">
+          <div class="div_ol">
+            <h4>Estaciones del año.</h4>
+              <ol>
+                <li>Primavera.</li>
+                <li>Verano.</li>
+                <li>Otoño.</li>
+                <li>Invierno.</li>
+              </ol>
+          </div>
+          <br>
+          <div class="div_ol">
+            <h4>Estaciones del año - - Lista con atributo Start | list with start attribute.</h4>
+            <ol start="3">
+              <li>Primavera.</li>
+              <li>Verano.</li>
+              <li>Otoño.</li>
+              <li>Invierno.</li>
+            </ol>
+          </div>
+          <br>
+          <div class="div_ol">
+            <h4>Estaciones del año - Lista con atributo reversed | list with reversed attribute.</h4>
+            <ol reversed>
+              <li>Primavera.</li>
+              <li>Verano.</li>
+              <li>Otoño.</li>
+              <li>Invierno.</li>
+            </ol>
+          </div>
+          <br>
+          <!-- -->
+          <div class="div_ol">
+            <h4>Estaciones del año - Lista con atributo type="1" | list with attribute type="1".</h4>
+            <ol type="1">
+              <li>Primavera.</li>
+              <li>Verano.</li>
+              <li>Otoño.</li>
+              <li>Invierno.</li>
+            </ol>
+          </div>
+            <br>
+            <!-- -->
+            <div class="div_ol">
+              <h4>Estaciones del año - Lista con atributo type="A" | list with attribute type="A" letras mayusculas.</h4>
+              <ol type="A">
+                <li>Primavera.</li>
+                <li>Verano.</li>
+                <li>Otoño.</li>
+                <li>Invierno.</li>
+              </ol>
+            </div>
+            <br>
+            <!-- -->
+            <div class="div_ol">
+              <h4>Estaciones del año - Lista con atributo type="a" | list with attribute type="a" letras minusculas.</h4>
+              <ol type="a">
+                <li>Primavera.</li>
+                <li>Verano.</li>
+                <li>Otoño.</li>
+                <li>Invierno.</li>
+              </ol>
+            </div>
+            <br>
+            <!-- -->
+            <div class="div_ol">
+              <h4>Estaciones del año - Lista con atributo type="I" | list with attribute type="I" números romanos letras mayusculas.</h4>
+              <ol type="I">
+                <li>Primavera.</li>
+                <li>Verano.</li>
+                <li>Otoño.</li>
+                <li>Invierno.</li>
+              </ol>
+            </div>
+            <br>
+            <!-- -->
+            <div class="div_ol">
+              <h4>Estaciones del año - Lista con atributo type="i" | list with attribute type="i" números romanos letras minusculas.</h4>
+              <ol type="i">
+                <li>Primavera.</li>
+                <li>Verano.</li>
+                <li>Otoño.</li>
+                <li>Invierno.</li>
+              </ol>
+            </div>
+        </fieldset>
+      </div>
+
+      <hr>
+      <div id="tag_ul" class="tag_ul">
+        <h2>19. Etiqueta &lt;ul&gt; - lista desordenada - unordered list. <span class="span-btn">
+          <a class="btn-main" href="#ind-tag_ol">Volver al Índice &#x2b06;&#xfe0f;</a>
+        </span></h2>
+        <p>La etiqueta &lt;ul&gt; de "unordered list" -lista no ordenada . crea una lista no ordenada.</p>
+        <p>Están los atributos más comunes de la etiqueta &lt;ul&gt; en HTML5:</p>
+        <ul>
+          <li><span class="bold">type:</span> Especifica el tipo de símbolo que se utilizará para los elementos de la lista. Los valores válidos incluyen disc, circle y square.</li>
+          <li><span class="bold">style:</span> Permite aplicar estilos CSS inline a la lista.</li>
+          <li><span class="bold">class:</span> Especifica una o varias clases CSS para la lista, que se pueden usar para aplicar estilos desde un archivo CSS externo.</li>
+          <li><span class="bold">id:</span> Especifica un identificador único para la lista, que se puede usar para aplicar estilos CSS o para acceder a la lista con JavaScript.</li>
+        </ul>
+        <p> Ver:<a href="https://oregoom.com/html/ul/">etiqueta ul - oregoom</a></p>
+        <div class="block-code">
+          <code>
+            <pre><span class="comment">&lt;!-- Lista con type="disc" | list with type="disc" --&gt;</span><br>&lt;<span class="keyword">h4</span>&gt;Estaciones del año&lt;/<span class="keyword">h4</span>&gt;<br>&lt;<span class="keyword">ul</span> <span class="atributes">type</span>="<span class="value">disc</span>"&gt;<br>  &lt;<span class="keyword">li</span>&gt;Primavera.&lt;/<span class="keyword">li</span>&gt;<br>  &lt;<span class="keyword">li</span>&gt;Verano.&lt;/<span class="keyword">li</span>&gt;<br>  &lt;<span class="keyword">li</span>&gt;Otoño.&lt;/<span class="keyword">li</span>&gt;<br>  &lt;<span class="keyword">li</span>&gt;Invierno.&lt;/<span class="keyword">li</span>&gt;<br>&lt;/<span class="keyword">ul</span>&gt;<br><span class="comment">&lt;!-- Lista con type="square" | list with type="square" --&gt;</span><br>&lt;<span class="keyword">h4</span>&gt;Estaciones del año&lt;/<span class="keyword">h4</span>&gt;<br>&lt;<span class="keyword">ul</span> <span class="atributes">type</span>="<span class="value">square</span>"&gt;<br>  &lt;<span class="keyword">li</span>&gt;Primavera.&lt;/<span class="keyword">li</span>&gt;<br>  &lt;<span class="keyword">li</span>&gt;Verano.&lt;/<span class="keyword">li</span>&gt;<br>  &lt;<span class="keyword">li</span>&gt;Otoño.&lt;/<span class="keyword">li</span>&gt;<br>  &lt;<span class="keyword">li</span>&gt;Invierno.&lt;/<span class="keyword">li</span>&gt;<br>&lt;/<span class="keyword">ul</span>&gt;<br><span class="comment">&lt;!-- Lista con type="circle" | list with type="circle" --&gt;</span><br>&lt;<span class="keyword">h4</span>&gt;Estaciones del año&lt;/<span class="keyword">h4</span>&gt;<br>&lt;<span class="keyword">ul</span> <span class="atributes">type</span>="<span class="value">circle</span>"&gt;<br>  &lt;<span class="keyword">li</span>&gt;Primavera.&lt;/<span class="keyword">li</span>&gt;<br>  &lt;<span class="keyword">li</span>&gt;Verano.&lt;/<span class="keyword">li</span>&gt;<br>  &lt;<span class="keyword">li</span>&gt;Otoño.&lt;/<span class="keyword">li</span>&gt;<br>  &lt;<span class="keyword">li</span>&gt;Invierno.&lt;/<span class="keyword">li</span>&gt;<br>&lt;/<span class="keyword">ul</span>&gt;<br></pre>
+          </code>
+        </div>
+        <fieldset class="tag_text ul">
+          <!--  -->
+        <div class="div_ul">
+          <h4>Estaciones del año - Lista con type="disc" | list with type="disc".</h4>
+          <ul type="disc">
+            <li>Primavera.</li>
+            <li>Verano.</li>
+            <li>Otoño.</li>
+            <li>Invierno.</li>
+          </ul>
+        </div>
+        <div class="div_ul">
+          <h4>Estaciones del año - Lista con type="square" | list with type="square".</h4>
+          <ul type="square">
+            <li>Primavera.</li>
+            <li>Verano.</li>
+            <li>Otoño.</li>
+            <li>Invierno.</li>
+          </ul>
+        </div>
+          <!--  -->
+        <div class="div_ul">
+          <h4>Estaciones del año - Lista con type="circle" | list with type="circle".</h4>
+          <ul type="circle">
+            <li>Primavera.</li>
+            <li>Verano.</li>
+            <li>Otoño.</li>
+            <li>Invierno.</li>
+          </ul>
+        </div>
+        </fieldset>
+      </div>
+
+      <hr>
+      <div id="tag_dl" class="tag_dl">
+        <h2>20. Etiqueta &lt;dl&gt; - lista de definición - definición list. <span class="span-btn">
+          <a class="btn-main" href="#ind-tag_dl">Volver al Índice &#x2b06;&#xfe0f;</a>
+        </span></h2>
+        <p>La etiqueta <span class="bold">&lt;dl&gt;</span> en HTML5 se utiliza para crear una lista de definición. Esta lista se compone de una serie de términos y sus definiciones correspondientes.</p>
+        <p>La etiqueta HTML <span class="bold">&lt;dt&gt;</span> se utiliza para definir un término en una lista de definición. Esta etiqueta se utiliza junto con la etiqueta <span class="bold">&lt;dl&gt;</span> (lista de definición) y la etiqueta <span class="bold">&lt;dd&gt;</span> (definición).</p>
+        <p>La etiqueta <span class="bold">&lt;dt&gt;</span> se coloca antes de la etiqueta <span class="bold">&lt;dd&gt;</span> y se utiliza para especificar el término que se está definiendo en la lista. Por ejemplo, en una lista de definición de términos de un glosario, la etiqueta <span class="bold">&lt;dt&gt;</span> se utilizaría para definir el término, mientras que la etiqueta <span class="bold">&lt;dd&gt;</span> se utilizaría para proporcionar la definición del término.</p>
+        <div class="block-code">
+          <pre><code>&lt;<span class="keyword">dl</span>&gt;<br>  &lt;<span class="keyword">dt</span>&gt;HTML.&lt;/<span class="keyword">dt</span>&gt;<br>  &lt;<span class="keyword">dd</span>&gt;Es un lenguaje de marcado que define el contenido de la web.&lt;/<span class="keyword">dd</span>&gt;<br>  &lt;<span class="keyword">dt</span>&gt;CSS&lt;/<span class="keyword">dt</span>&gt;<br>  &lt;<span class="keyword">dd</span>&gt;Es un lenguaje de definición que da estilos al código HTML.&lt;/<span class="keyword">dd</span>&gt;<br>&lt;<span class="keyword">dt</span>&gt;Javascript&lt;/<span class="keyword">dt</span>&gt;<br>  &lt;<span class="keyword">dd</span>&gt;Es el lenguaje de la web.&lt;/<span class="keyword">dd</span>&gt;<br>&lt;/<span class="keyword">dl</span>&gt;</code></pre>
+        </div>
+        <fieldset class="tag_text">
+          <dl>
+            <dt>HTML.</dt>
+            <dd>Es un lenguaje de marcado que define el contenido de la web.</dd>
+            <dt>CSS</dt>
+            <dd>Es un lenguaje de definición que da estilos al código HTML.</dd>
+            <dt>Javascript</dt>
+            <dd>Es el lenguaje de la web.</dd>
+          </dl>
+        </fieldset>
+      </div>
+
+      <hr>
+      <div id="tag_table" class="tag_table">
+        <h2>21. Etiqueta de tabla &lt;table&gt;. <span class="span-btn">
+          <a class="btn-main" href="#ind-tag_dl">Volver al Índice &#x2b06;&#xfe0f;</a>
+        </span></h2>
+        <p>El Elemento de Tabla HTML (<span class="bold">&lt;table&gt;</span>) representa datos en dos o mas dimensiones. Ver: <a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/table">MDN - Etiqueta &lt;table&gt;</a></p>
+        <h3>21.1. Etiquetas HTML dentro de la etiqueta &lt;table&gt;</h3>
+        <p>La estructura básica de una tabla consta de una etiqueta <span class="bold">&lt;table&gt;</span> que envuelve a otras etiquetas como <span class="bold">&lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt;, &lt;tr&gt;, &lt;th&gt; y &lt;td&gt;. Ver: </span><a href="https://oregoom.com/html/table/">HTML table | oregoom.</a></p>
+
+        <h4>1- Etiqueta &lt;caption&gt;.</h4>
+        <p><span class="bold">1.1.La etiqueta &lt;caption&gt;</span> se usa a menudo con una tabla para describir su contenido. Se utiliza tambien para dar titulos a la tabla. <span class="bold a">Ver:</span> <a href="https://htmldesdecero.es/etiquetas/table/">Etiqueta TABLE | htmldesdecero.</a>, <a href="https://www.htmlquick.com/es/reference/tags/table.html">htmlquick etiqueta table.</a></p>
+
+        <h4>2- Etiqueta &lt;thead&gt; | table head.</h4>
+        <p><span class="bold">2.1. La etiqueta &lt;thead&gt;</span> se usa para crear un encabezado de tabla que se mostrará al principio de la tabla y se utiliza para describir las columnas. <span class="bold a">Ver:</span> <a href="https://oregoom.com/html/table/">HTML table | oregoom.</a></p>
+        <p><span class="bold">2.2. &lt;thead&gt;:</span> representa la sección de encabezado de la tabla. <span class="bold a">Ver:</span> <a href="https://www.htmlquick.com/es/reference/tags/table.html">htmlquick etiqueta table.</a></p>
+
+        <h4>3- Etiqueta &lt;tbody&gt;.</h4>
+        <p><span class="bold">3.1. La etiqueta &lt;tbody&gt;</span> se utiliza para crear el cuerpo de la tabla, donde se incluyen las filas y celdas con los datos. <span class="bold a">Ver:</span> <a href="https://oregoom.com/html/table/">HTML table | oregoom.</a></p>
+        <p><span class="bold">3.2. &lt;tbody&gt;: </span>representa a un cuerpo de la tabla. <span class="bold a">Ver:</span> <a href="https://www.htmlquick.com/es/reference/tags/table.html">htmlquick etiqueta table.</a></p>
+
+        <h4>4- Etiqueta &lt;tfoot&gt;</h4>
+        <p><span class="bold">4.1. La etiqueta &lt;tfoot&gt;</span> se utiliza para crear un pie de tabla que se mostrará al final de la tabla y se utiliza para mostrar información resumen. <span class="bold a">Ver:</span> <a href="https://oregoom.com/html/table/">HTML table | oregoom.</a></p>
+        <p><span class="bold">4.2. &lt;tfoot&gt;: </span> representa la sección de pie de la tabla. <span class="bold a">Ver:</span> <a href="https://www.htmlquick.com/es/reference/tags/table.html">htmlquick etiqueta table.</a></p>
+        
+        <h4>5- Etiqueta &lt;th&gt; | table head.</h4>
+        <p><span class="bold">5.1. La etiqueta &lt;th&gt;</span> se utiliza para crear una celda de encabezado en una fila. <span class="bold a">Ver:</span> <a href="https://oregoom.com/html/table/">HTML table | oregoom.</a></p>
+        <p><span class="bold">5.2. (table header o &lt;th&gt;)</span> El elemento de encabezado de tabla es similar al elemento table data y configura una celda dentro de una fila en una tabla en una página web. Su propósito es configurar los encabezados de columna y fila. El texto que se muestra dentro de un elemento de encabezado &lt;th&gt; de tabla está centrado y en negrita. <span class="bold a">Ver:</span> <a href="https://htmldesdecero.es/etiquetas/table/">Etiqueta TABLE | htmldesdecero.</a></p>
+        <p><span class="bold">5.3. &lt;th&gt;: </span>representa a una celda de encabezado. Sólo puede ser declarado como hijo de &lt;tr&gt;. <span class="bold a">Ver:</span> <a href="https://www.htmlquick.com/es/reference/tags/table.html">htmlquick etiqueta table.</a></p>
+
+        <h4>6- Etiqueta &lt;tr&gt; | table row.</h4>
+        <p><span class="bold">6.1. La etiqueta &lt;tr&gt;</span> se utiliza para crear una fila en la tabla. <span class="bold a">Ver:</span> <a href="https://oregoom.com/html/table/">HTML table | oregoom.</a></p>
+        <p><span class="bold">6.2. table row &lt;tr&gt;: </span>El elemento de fila de la tabla configura una fila dentro de una tabla en una página web. <span class="bold a">Ver:</span> <a href="https://htmldesdecero.es/etiquetas/table/">Etiqueta TABLE | htmldesdecero.</a></p>
+        <p><span class="bold">6.3. &lt;tr&gt;: </span>representa una fila. Puede ser declarado como hijo de &lt;tbody&gt;, &lt;&gt;thead&gt;, &lt;tfoot&gt; o &lt;table&gt;. <span class="bold a">Ver:</span> <a href="https://www.htmlquick.com/es/reference/tags/table.html">htmlquick etiqueta table.</a></p>
+        
+        <h4>7- Etiqueta &lt;td&gt;</h4>
+        <p><span class="bold">7.1. La etiqueta &lt;td&gt;</span> se utiliza para crear una celda de datos en una fila. <span class="bold a">Ver:</span> <a href="https://oregoom.com/html/table/">HTML table | oregoom.</a></p>
+        <p><span class="bold">7.2. table data o &lt;td&gt;: </span>El elemento de datos de la tabla configura una celda dentro de una fila en una tabla en una página web. <span class="bold a">Ver:</span> <a href="https://htmldesdecero.es/etiquetas/table/">Etiqueta TABLE | htmldesdecero.</a></p>
+        <p><span class="bold">&lt;td&gt;: </span> representa a una celda regular. Sólo puede ser declarado como hijo de tr. <span class="bold a">Ver:</span> <a href="https://www.htmlquick.com/es/reference/tags/table.html">htmlquick etiqueta table.</a></p>
+        <h3>21.2. Atributos de la etiqueta table</h3>
+        <p>Ten en cuenta que la mayoría de los atributos enumerados en la siguiente Tabla están obsoletos en HTML5 y deben evitarse. Aunque estos atributos están obsoletos en HTML5, a medida que trabajas con la Web, verás muchas páginas web codificadas con versiones anteriores de HTML5 y es útil conocer incluso los atributos obsoletos. Los desarrolladores web modernos prefieren configurar el estilo de tablas con propiedades CSS en lugar de con atributos HTML. Un atributo prominente que permanece en uso es el atributo de border. <span class="bold a">Ver:</span> <a href="https://htmldesdecero.es/etiquetas/table/">Etiqueta TABLE | htmldesdecero.</a></p>
+        <table class="table_attributes">
+          <thead>
+          <tr>
+          <th class="first_column">Atributo</th>
+          <th class="second_column">Valor</th>
+          <th class="third_column">Propósito</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+          <td>align</td>
+          <td>left (default), right, center</td>
+          <td>Alineación horizontal de la tabla (obsoleta en HTML5)</td>
+          </tr>
+          <tr>
+          <td>bgcolor</td>
+          <td>Valor de color valido</td>
+          <td>Color de fondo de la tabla (obsoleto en HTML5).</td>
+          </tr>
+          <tr>
+          <td>border</td>
+          <td>0/1–100</td>
+          <td>Defecto; no hay un borde visible / Borde visible con ancho de píxel especificado</td>
+          </tr>
+          <tr>
+          <td>cellpadding</td>
+          <td>Valor numérico</td>
+          <td>Especifica el número de píxeles de relleno entre el contenido de una celda de la tabla y su borde (obsoleto en HTML5).</td>
+          </tr>
+          <tr>
+          <td>cellspacing</td>
+          <td>Valor numérico</td>
+          <td>Especifica el número de píxeles de espacio entre los bordes de cada celda en una tabla (obsoleta en HTML5).</td>
+          </tr>
+          <tr>
+          <td>summary</td>
+          <td>Descripción de texto</td>
+          <td>Proporciona accesibilidad con una descripción de texto que brinda una descripción general y el contexto para la información en la tabla (obsoleta en HTML5)</td>
+          </tr>
+          <tr>
+          <td>title</td>
+          <td>Descripción de texto</td>
+          <td>Una breve descripción de texto que proporciona una visión general de la tabla; Algunos navegadores pueden mostrarlo como información sobre herramientas.</td>
+          </tr>
+          <tr>
+          <td>width</td>
+          <td>Valor numérico o porcentaje</td>
+          <td>Especifica el ancho de la tabla (obsoleto en HTML5).</td>
+          </tr>
+          </tbody>
+          </table>
+        
+        <div class="block-code">
+          <pre><code>&lt;<span class="keyword">table</span>&gt;<br>  &lt;<span class="keyword">tr</span>&gt;<br>    &lt;<span class="keyword">td</span>&gt;Nombre&lt;/ <span class="keyword">td</span>&gt;<br>    &lt;<span class="keyword">td</span>&gt;Constelación&lt;/ <span class="keyword">td</span>&gt;<br>    &lt;<span class="keyword">td</span>&gt;Tipo&lt;/ <span class="keyword">td</span>&gt;<br>  &lt;/<span class="keyword">tr</span>&gt;<br>    &lt;<span class="keyword">tr</span>&gt;<br>    &lt;<span class="keyword">td</span>&gt;Ikki&lt;/ <span class="keyword">td</span>&gt;<br>    &lt;<span class="keyword">td</span>&gt;Fénix&lt;/ <span class="keyword">td</span>&gt;<br>    &lt;<span class="keyword">td</span>&gt;Bronce&lt;/ <span class="keyword">td</span>&gt;<br>  &lt;/<span class="keyword">tr</span>&gt;<br>  &lt;<span class="keyword">tr</span>&gt;<br>    &lt;<span class="keyword">td</span>&gt;Shaina&lt;/ <span class="keyword">td</span>&gt;<br>    &lt;<span class="keyword">td</span>&gt;Ofiuco&lt;/ <span class="keyword">td</span>&gt;<br>    &lt;<span class="keyword">td</span>&gt;Plata&lt;/ <span class="keyword">td</span>&gt;<br>  &lt;/<span class="keyword">tr</span>&gt;<br>  &lt;<span class="keyword">tr</span>&gt;<br>    &lt;<span class="keyword">td</span>&gt;Saga&lt;/ <span class="keyword">td</span>&gt;<br>    &lt;<span class="keyword">td</span>&gt;Geminis&lt;/ <span class="keyword">td</span>&gt;<br>    &lt;<span class="keyword">td</span>&gt;Dorado&lt;/ <span class="keyword">td</span>&gt;<br>  &lt;/<span class="keyword">tr</span>&gt;<br>&lt;/<span class="keyword">table</span>&gt;<br><br>&lt;<span class="keyword">table</span>&gt;<br>  &lt;<span class="keyword">thead</span>&gt;<br>    &lt;<span class="keyword">tr</span>&gt;<br>      &lt;<span class="keyword">th</span>&gt;Nombre&lt;/ <span class="keyword">th</span>&gt;<br>      &lt;<span class="keyword">th</span>&gt;Constelación&lt;/ <span class="keyword">th</span>&gt;<br>      &lt;<span class="keyword">th</span>&gt;Tipo&lt;/ <span class="keyword">th</span>&gt;<br>    &lt;/<span class="keyword">tr</span>&gt;<br>  &lt;/<span class="keyword">thead</span>&gt;<br>  &lt;<span class="keyword">tbody</span>&gt;<br>    &lt;<span class="keyword">tr</span>&gt;<br>      &lt;<span class="keyword">td</span>&gt;Ikki&lt;/ <span class="keyword">td</span>&gt;<br>      &lt;<span class="keyword">td</span>&gt;Fénix&lt;/ <span class="keyword">td</span>&gt;<br>      &lt;<span class="keyword">td</span>&gt;Bronce&lt;/ <span class="keyword">td</span>&gt;<br>  &lt;/<span class="keyword">tr</span>&gt;<br>  &lt;<span class="keyword">tr</span>&gt;<br>      &lt;<span class="keyword">td</span>&gt;Shaina&lt;/ <span class="keyword">td</span>&gt;<br>      &lt;<span class="keyword">td</span>&gt;Ofiuco&lt;/ <span class="keyword">td</span>&gt;<br>      &lt;<span class="keyword">td</span>&gt;Plata&lt;/ <span class="keyword">td</span>&gt;<br>  &lt;/<span class="keyword">tr</span>&gt;<br>  &lt;<span class="keyword">tr</span>&gt;<br>      &lt;<span class="keyword">td</span>&gt;Saga&lt;/ <span class="keyword">td</span>&gt;<br>      &lt;<span class="keyword">td</span>&gt;Geminis&lt;/ <span class="keyword">td</span>&gt;<br>      &lt;<span class="keyword">td</span>&gt;Dorado&lt;/ <span class="keyword">td</span>&gt;<br>    &lt;/<span class="keyword">tr</span>&gt;  <br>  &lt;/<span class="keyword">tbody</span>&gt;<br>&lt;/<span class="keyword">table</span>&gt;<br><br>&lt;<span class="keyword">table</span>&gt;<br>  &lt;<span class="keyword">thead</span>&gt;<br>    &lt;<span class="keyword">tr</span>&gt;<br>      &lt;<span class="keyword">th</span> <span class="atributes">colspan</span>="<span class="value">3</span>"&gt;Tabla de los santos de Athena.&lt;/ <span class="keyword">th</span>&gt;<br>    &lt;/<span class="keyword">tr</span>&gt;<br>    &lt;<span class="keyword">tr</span>&gt;<br>      &lt;<span class="keyword">th</span>&gt;Nombre&lt;/ <span class="keyword">th</span>&gt;<br>      &lt;<span class="keyword">th</span>&gt;Constelación&lt;/ <span class="keyword">th</span>&gt;<br>      &lt;<span class="keyword">th</span>&gt;Tipo&lt;/ <span class="keyword">th</span>&gt;<br>    &lt;/<span class="keyword">tr</span>&gt;<br>  &lt;/<span class="keyword">thead</span>&gt;<br>  &lt;<span class="keyword">tbody</span>&gt;<br>    &lt;<span class="keyword">tr</span>&gt;<br>      &lt;<span class="keyword">td</span>&gt;Ikki&lt;/ <span class="keyword">td</span>&gt;<br>      &lt;<span class="keyword">td</span>&gt;Fénix&lt;/ <span class="keyword">td</span>&gt;<br>      &lt;<span class="keyword">td</span>&gt;Bronce&lt;/ <span class="keyword">td</span>&gt;<br>    &lt;<span class="keyword">tr</span>&gt;<br>      &lt;<span class="keyword">td</span>&gt;Marin&lt;/ <span class="keyword">td</span>&gt;<br>      &lt;<span class="keyword">td</span>&gt;Águila&lt;/ <span class="keyword">td</span>&gt;<br>      &lt;<span class="keyword">td</span>&gt;Plata&lt;/ <span class="keyword">td</span>&gt;<br>  &lt;/<span class="keyword">tr</span>&gt;<br>  &lt;<span class="keyword">tr</span>&gt;<br>      &lt;<span class="keyword">td</span>&gt;Saga&lt;/ <span class="keyword">td</span>&gt;<br>      &lt;<span class="keyword">td</span>&gt;Geminis&lt;/ <span class="keyword">td</span>&gt;<br>      &lt;<span class="keyword">td</span>&gt;Dorado&lt;/ <span class="keyword">td</span>&gt;<br>    &lt;/<span class="keyword">tr</span>&gt;  <br>  &lt;<span class="keyword">tr</span>&gt;<br>      &lt;<span class="keyword">td</span>&gt;Shaina&lt;/ <span class="keyword">td</span>&gt;<br>      &lt;<span class="keyword">td</span> <span class="atributes">rowspan</span>="<span class="value">2</span>"&gt;Ofiuco&lt;/ <span class="keyword">td</span>&gt;<br>      &lt;<span class="keyword">td</span>&gt;Plata&lt;/ <span class="keyword">td</span>&gt;<br>  &lt;/<span class="keyword">tr</span>&gt;<br>    &lt;<span class="keyword">tr</span>&gt;<br>      &lt;<span class="keyword">td</span>&gt;Odiseo&lt;/ <span class="keyword">td</span>&gt;<br>      &lt;<span class="keyword">td</span>&gt;Ofiuco&lt;/ <span class="keyword">td</span>&gt;<br>      &lt;<span class="keyword">td</span>&gt;Dorado&lt;/ <span class="keyword">td</span>&gt;<br>    &lt;/<span class="keyword">tr</span>&gt;<br>  &lt;/<span class="keyword">tbody</span>&gt;<br>  &lt;<span class="keyword">tfoot</span>&gt;<br>    &lt;<span class="keyword">tr</span>&gt;<br>      &lt;<span class="keyword">th</span> <span class="atributes">colspan</span>="<span class="value">3</span>"&gt;&lt;<span class="keyword">small</span>&gt;Sain Seiya fue creado por Masami Kurumada.&lt;/<span class="keyword">small</span>&gt;&lt;/<span class="keyword">th</span>&gt;<br>    &lt;<span class="keyword">tr</span>&gt;<br>&lt;/<span class="keyword">table</span>&gt;<br></code></pre>
+        </div>
+        <fieldset class="tag_text table">
+          <p><span class="bold">!Recuerda: </span>Sí utilizas archivos para predefinir o resetear los estilos de tu documento html como "reset.css" y/o "normalize.css" o sí asignas  defecto la propiedad border para todos los elementos de tu documento HTML con el valor de 0. (CSS-Code: *{border: 0;}), el atributo border dentro de la etiqueta table NO FUNCIONARA, &lt;<span class="bold">table border</span>="1"&gt;</p>
+          <section class="container_saint_seiya">
+            <div>
+              <table border="1" class="saint_seiya_table">
+                <tr>
+                  <td>Nombre</td>
+                  <td>Constelación</td>
+                  <td>Tipo</td>
+                </tr>
+                  <tr>
+                  <td>Ikki</td>
+                  <td>Fénix</td>
+                  <td>Bronce</td>
+                </tr>
+                <tr>
+                  <td>Shaina</td>
+                  <td>Ofiuco</td>
+                  <td>Plata</td>
+                </tr>
+                <tr>
+                  <td>Saga</td>
+                  <td>Geminis</td>
+                  <td>Dorado</td>
+                </tr>
+              </table>
+            </div>
+  
+            <div>
+            <table class="saint_seiya_table" border="1">
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Constelación</th>
+                  <th>Tipo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Ikki</td>
+                  <td>Fénix</td>
+                  <td>Bronce</td>
+              </tr>
+              <tr>
+                  <td>Shaina</td>
+                  <td>Ofiuco</td>
+                  <td>Plata</td>
+              </tr>
+              <tr>
+                  <td>Saga</td>
+                  <td>Geminis</td>
+                  <td>Dorado</td>
+                </tr>  
+              </tbody>
+            </table>
+            </div>
+  
+            <div>
+            <table class="saint_seiya_table" border="1">
+              <thead>
+                <tr>
+                  <th colspan="3">Tabla de los santos de Athena.</th>
+                </tr>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Constelación</th>
+                  <th>Tipo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Ikki</td>
+                  <td>Fénix</td>
+                  <td>Bronce</td>
+                <tr>
+                  <td>Marin</td>
+                  <td>Águila</td>
+                  <td>Plata</td>
+              </tr>
+              <tr>
+                  <td>Saga</td>
+                  <td>Geminis</td>
+                  <td>Dorado</td>
+                </tr>  
+              <tr>
+                  <td>Shaina</td>
+                  <td rowspan="2">Ofiuco</td>
+                  <td>Plata</td>
+              </tr>
+                <tr>
+                  <td>Odiseo</td>
+                  <td>Ofiuco</td>
+                  <td>Dorado</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th colspan="3"><small>Sain Seiya fue creado por Masami Kurumada.</small></th>
+            </table>
+            </div>
+          </section>
+        </fieldset>
+      </div>
+
+      <hr>
+      <div id="tag_anchor" class="tag_anchor">
+        <h2>22. Etiqueta &lt;a&gt; - Anchor - Enlaces.<span class="span-btn">
+          <a class="btn-main" href="#ind-tag_anchor">Volver al Índice &#x2b06;&#xfe0f;</a>
+        </span></h2>
+        <article>
+          <p>La etiqueta &lt;a&gt; anchor, se utiliza para crear enlaces a otros documentos o recursos, ya sea dentro del mismo sitio web o en sitios web externos. <a href="https://oregoom.com/html/a/">Etiqueta anchor &lt;a&gt; - oregoom.</a></p>
+          <p>La etiqueta &lt;a&gt; anchor (Ancla en español), "crea un enlace a una URL: una página web, una sección dentro de una página, una dirección de correo electrónico". (traducido al español con bing.IA) <a href="https://htmlreference.io/element/a/">tag anchor &lt;a&gt; - htmlreference.io.</a></p>
+          <h3>22.1. Tag &lt;a&gt; - Atributos</h3>
+          <h4>1. href. (<span class="required">required</span>)</h4>
+          <p><span class="bold">href. </span>Define el destino del enlace. (traducido al español con bing.IA). <a href="https://htmlreference.io/element/a/">Tag a - htmlreference.io</a> </p>
+          <p>
+            El valor de este atributo es la URL del sitio web de ejemplo. Cuando el usuario hace clic en el enlace, se abrirá el sitio web en una nueva ventana o pestaña del navegador. <a href="https://oregoom.com/html/a/">Etiqueta anchor &lt;a&gt; - oregoom.</a></p>
+          <p>Puedes pasar una URL absoluta. <span class="bgcolor">"https://htmlreference.io"</span>. <span class="bgcolor"></span>Puedes pasar una URL relativa al dominio raíz. <span class="bgcolor">"/element/div"</span>. Puedes apuntar a un elemento dentro de la misma página. Aquí, apuntamos al elemento &lt;div id="footer"&gt; .<span class="bgcolor">"#footer"</span>. Puedes usar el protocolo mailto. Al hacer clic en el enlace se abrirá el cliente de correo electrónico del usuario. <span class="bgcolor">href="mailto:alex@smith.com"</span> </p>
+          <h4>2. target</h4>
+          <p>Define en qué pestaña o ventana se mostrará el enlace clicado. (traducido al español con chatgpt). <a href="https://htmlreference.io/element/a/">Tag a - htmlreference.io</a></p>
+          <p>1. <span class="bgcolor"><span class="bold">"_blank"</span></span> Abre en un nuevo contexto de navegación, que generalmente es una nueva pestaña.</p>
+          <p>2. <span class="bgcolor"><span class="bold">"_self"</span></span> Se abre en la pestaña actual.</p>
+          <p>3. <span class="bgcolor"><span class="bold">"_parent"</span></span> Se abre en el contexto de navegación principal, o en "_self" si no existe ninguno.</p>
+          <p>4. <span class="bold"><span class="bgcolor">"_top"</span></span> Se abre en el contexto de navegación superior, o en "_self" si no existe ninguno.</p>
+          <h4>3. rel</h4>
+          <p>Define cómo se relaciona el objetivo del enlace con la página web actual. (traducido al español con chatgpt). <a href="https://htmlreference.io/element/a/">Tag a - htmlreference.io</a></p>
+          <p><span class="bgcolor"><span class="bold">"nofollow"</span></span> El objetivo no está relacionado. Se usa generalmente para sitios web externos.</p>
+          <p> El valor de este atributo es <span class="bold"><span class="bgcolor">“noopener noreferrer”</span></span>. Este valor es importante porque ayuda a prevenir ataques de seguridad en la página actual, como la suplantación de identidad. <span class="bold"><span class="bgcolor">"noopener"</span></span> indica que la ventana abierta no debe tener acceso a la ventana que abrió el enlace, y <span class="bold"><span class="bgcolor">"noreferrer"</span></span> indica que el navegador no debe enviar la información de referencia del sitio web de la página actual al sitio web vinculado.</p>
+
+        </article>
+        <div class="block-code">
+          <pre><code>&lt;<span class="keyword">a</span> <span class="atributes">href</span>="<span class="value">hola.html</span>"&gt;Hacia la página hola&lt;/<span class="keyword">a</span>&gt;<br>&lt;<span class="keyword">br</span>&gt;<br>&lt;<span class="keyword">a</span> <span class="atributes">href</span>="<span class="value">https://jonmircha.com</span>" <span class="atributes">target</span>="<span class="value">_blank</span>" <span class="atributes">rel</span>="<span class="value">nofollow</span>"&gt;Visita el sitio web del edutuber jonmircha.com&lt;/<span class="keyword">a</span>&gt;<br>&lt;<span class="keyword">br</span>&gt;<br>&lt;<span class="keyword">a</span> <span class="atributes">href</span>="<span class="value">https://jonmircha.com</span>" <span class="atributes">target</span>="<span class="value">_blank</span>"&gt;&lt;<span class="keyword">img</span> <span class="atributes">src</span>="<span class="value">assets/kEnAi.svg</span>" <span class="atributes">alt</span>="<span class="value">Ir hacia mis cursos en jonmircha.com</span>" <span class="atributes">width</span>="<span class="value">40</span>" <span class="atributes">height</span>="<span class="value">40</span>"> &lt;/<span class="keyword">a</span>&gt;<br>&lt;<span class="keyword">br</span>&gt;<br>&lt;<span class="keyword">a</span> <span class="atributes">href</span>="<span class="value">https://youtube.com/jonmircha</span>" <span class="atributes">target</span>="<span class="value">_blank</span>"&gt;&lt;<span class="keyword">svg</span> <span class="atributes">width</span>="<span class="value">24</span>" <span class="atributes">height</span>="<span class="value">24</span>" <span class="atributes">viewBox</span>="<span class="value">0 0 24 24</span>" <span class="atributes">fill</span>="<span class="value">none</span>" <span class="atributes">xmlns</span>="<span class="value">http://www.w3.org/2000/svg</span>"&gt;<br>&lt;<span class="keyword">path</span>&gt; <span class="atributes">fill-rule</span>="<span class="value">evenodd</span>" <span class="atributes"></span> <span class="atributes">clip-rule</span>="<span class="value">evenodd</span>" <span class="atributes">d</span>="<span class="value">M5 7H19C19.5523 7 20 7.44771 20 8V16C20 16.5523 19.5523 17 19 17H5C4.44772 17 4 16.5523 4 16V8C4 7.44772 4.44772 7 5 7ZM2 8C2 6.34315 3.34315 5 5 5H19C20.6569 5 22 6.34315 22 8V16C22 17.6569 20.6569 19 19 19H5C3.34315 19 2 17.6569 2 16V8ZM10 9L14 12L10 15V9Z</span>" <span class="atributes">fill</span>="<span class="value">currentColor</span>"/&gt;&lt;/<span class="keyword">svg</span>&gt;<br>&lt;/<span class="keyword">a</span>&gt;
+          </code></pre>
+        </div>
+        <fieldset class="tag_text">
+          <a href="page_hola.html">Hacia la página Hola</a>
+          <br>
+          <a href="https://jonmircha.com" target="_blank" rel="nofollow">Visita el sitio web del edutuber jonmircha.com</a> <span class="comment">&lt;!-- no follow - en español: no sigas; spider-web de los motores de busqueda, se recomienda para sitios no relacionados.--&gt;</span>
+          <br><br>
+          <span class="comment">&lt;!--Enlace con imagen hacia la página web de jonmircha&gt;&gt;</span><br>
+          <a href="https://jonmircha.com/cursos" target="_blank">
+            <img src="assets/kEnAi.svg" alt="Ir hacia mis cursos en jonmircha.com" width="40" height="40">
+          </a>
+          <br>
+          <span class="comment">&lt;!--Enlace con imagen SVG en code html hacia el canal de YouTube de jonmircha&gt;&gt;</span><br>
+          <a href="https://youtube.com/jonmircha" target="_blank">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M5 7H19C19.5523 7 20 7.44771 20 8V16C20 16.5523 19.5523 17 19 17H5C4.44772 17 4 16.5523 4 16V8C4 7.44772 4.44772 7 5 7ZM2 8C2 6.34315 3.34315 5 5 5H19C20.6569 5 22 6.34315 22 8V16C22 17.6569 20.6569 19 19 19H5C3.34315 19 2 17.6569 2 16V8ZM10 9L14 12L10 15V9Z"
+                fill="currentColor" />
+            </svg>
+          </a>
+        </fieldset>
+      </div>
+
+      <hr>
+      <div id="tag_anchor_inner" class="tag_anchor_inner">
+        <h2>23. Enlaces internos &lt;a href="".&gt;<span class="span-btn">
+          <a class="btn-main" href="#ind-tag_anchor_inner">Volver al Índice &#x2b06;&#xfe0f;</a>
+        </span></h2>
+        
+        <fieldset class="tag_text">
+          <h2>Contenido</h2>
+          <p id="ind-estructura">1. <a href="#estructura">Estructura General del Documento HTML.</a></p>
+          <p id="ind-html_tag">2. <a href="#html_tag">Etiqueta HTML y el atributo lang.</a></p>
+          <p id="ind-tag_doctype">3. <a href="#tag_doctype">Etiqueta &lt;!DOCTYPE&gt;.</a></p>
+          <p id="ind-meta_charset">4. <a href="#meta_charset">Atributo charset.</a></p>
+          <p id="ind-meta_viewport">5. <a href="#meta_viewport">Etiqueta &lt;meta&gt; - Viewport.</a></p>
+          <p id="ind-tag_title">6. <a href="#tag_title">Etiqueta &lt;title&gt; y atributo description.</a></p>
+          <p id="ind-tag_h1">7. <a href="#tag_h1">Etiqueta &lt;h1&gt;...&lt;h6&gt; - Encabezados</a></p>
+          <p id="ind-text_basic">8. <a href="#text_basic">Etiquetas de texto básicos.</a></p>
+          <p id="ind-text_semantic">9. <a  href="#text_semantic">Etiquetas de texto semánticos.</a></p>
+          <p id="ind-tag_br">10. <a href="#tag_br">Etiquetas de salto.</a></p>
+        </fieldset>
+      </div>
+
+      <hr>
+      <div id="tag_anchor_special_protocols" class="tag_anchor_special_protocols">
+        <h2>24. Enlaces y protocolos especiales.<span class="span-btn">
+          <a class="btn-main" href="#ind-tag_anchor_special_protocols">Volver al Índice &#x2b06;&#xfe0f;</a>
+        </span></h2>
+        <div class="block-code">
+          <pre><code>&lt;<span class="keyword">a</span> <span class="atributes">href</span>="<span class="value">mailto:hola@jonmircha.com</span>"&gt;Enlace a correo electrónico&lt;/<span class="keyword">a</span>&gt;<br>&lt;<span class="keyword">br</span>&gt;<br>&lt;<span class="keyword">a</span> <span class="atributes"> href</span>="<span class="value"></span>tel:5215512345678</span>"&gt;Enlace a télefono&lt;/<span class="keyword">a</span>&gt;<br>&lt;<span class="keyword">br</span>&gt;<br>&lt;<span class="keyword">a</span> <span class="atributes">href</span>="<span class="value">https://api.whatsapp.com/send?phone=5215512345678&text=Hola</span>"&gt;Enlace hacia WhatsApp&lt;/<span class="keyword">a</span>&gt;
+          </code></pre>
+        </div>
+        <fieldset class="tag_text">
+          <a href="mailto:hola@jonmircha.com">Enlace a correo electrónico</a>
+          <br>
+          <a href="tel:5215512345678">Enlace a télefono</a>
+          <br>
+          <a href="https://api.whatsapp.com/send?phone=5215512345678&text=Hola">Enlace hacia WhatsApp</a>
+        </fieldset>
+      </div>
+
+      <hr>
+      <div id="tag_interactive_elements" class="tag_interactive_elements">
+        <h2>25. Elementos Interactivos &lt;button&gt; &lt;dialog&gt; &lt;details&gt; <span class="span-btn">
+          <a class="btn-main" href="#ind-tag_interactive_elements">Volver al Índice &#x2b06;&#xfe0f;</a>
+        </span></h2>
+        <article>
+          <h3>25.1. Tag button.</h3>
+          <p>La etiqueta <span class="bold">&lt;button&gt;</span> en HTML es utilizada para crear un botón interactivo en una página web. El botón puede tener una etiqueta de texto dentro de él y puede ser usado para enviar datos a un servidor, llamar a una función JavaScript o simplemente como un enlace.<a href="https://oregoom.com/html/button/">Etiqueta button &lt;button&gt; - oregoom.</a>.</p>
+          <p>Define un boton clickeable.(traducido con google translate) <a href="https://htmlreference.io/element/button/">Tag button - htmlreference.io</a>.</p>
+          <h3>Atributos de tag button.</h3>
+          <h4>1. name - nombre.</h4>
+          <p>Define el identificador único para ese botón dentro del formulario. Permite que el servidor acceda al valor de cada botón cuando se envía. <a href="https://htmlreference.io/element/button/">Tag button - htmlreference.io</a>.</p>
+          <p>Especifica un nombre para el botón, que se utilizará para identificarlo en el lado del servidor cuando se envía el formulario. <a href="https://oregoom.com/html/button/">Etiqueta button &lt;button&gt; - oregoom.</a>.</p>
+          <p><span class="bold"><span class="bgcolor">1.1. "submit_button"</span></span>
+          </p>
+          <p>El valor del nombre debe ser único dentro del contexto de un contenedor &lt;form&gt;. Sólo puede contener caracteres alfanuméricos a-z A-Z 0-9 y algunos caracteres especiales como - _... pero sin espacios.</p>
+          <h4>2. value</h4>
+          <p>Especifica el valor que se enviará al servidor cuando se envía el formulario. <a href="https://oregoom.com/html/button/">Etiqueta button &lt;button&gt; - oregoom.</a>.</p>
+          <p>Es el valor enviado al servidor al enviar el formulario.(traducido con google translate) <a href="https://htmlreference.io/element/button/">Tag button - htmlreference.io</a>.</p>
+          <h4>3. type</h4>
+          <p>Define el tipo de boton. (traducido con google translate) <a href="https://htmlreference.io/element/button/">Tag button - htmlreference.io</a>.</p>
+          <p> Especifica el tipo de botón. Puede ser <span class="bgcolor">“submit”</span> (enviar formulario), <span class="bgcolor">“reset”</span> (reiniciar formulario) o <span class="bgcolor">“button”</span> (botón normal). El valor predeterminado es “submit”.</p>
+          <p><span class="bold"><span class="bgcolor">1. "submit"</span>:</span> El botón envía los datos del formulario al servidor.  (traducido con DeepL) <a href="https://htmlreference.io/element/button/">Tag button - htmlreference.io</a>.</p>
+          <p><span class="bold"><span class="bgcolor">2. "reset"</span>:</span> El botón reinicia el formulario. (traducido con DeepL) <a href="https://htmlreference.io/element/button/">Tag button - htmlreference.io</a>.</p>
+
+          <h4>4. disabled</h4>
+          <p>Desactiva el botón. No requiere ningún valor. (traducido con deepl) <a href="https://htmlreference.io/element/button/">Tag button - htmlreference.io</a>.</p>
+          <p>Define si el botón está deshabilitado o no. Un botón deshabilitado no puede ser presionado. <a href="https://oregoom.com/html/button/">Etiqueta button &lt;button&gt; - oregoom.</a>.</p>
+          <h4>5. autofocus</h4>
+          <p>Fija el foco en el elemento cuando se carga la página web. No se requiere ningún valor.(traducido con deepl) <a href="https://htmlreference.io/element/button/">Tag button - htmlreference.io</a>.</p>
+          <p>Define si el botón debe tener el foco automáticamente al cargar la página. <a href="https://oregoom.com/html/button/">Etiqueta button &lt;button&gt; - oregoom.</a>.</p>
+          <h4>6. form</h4>
+          <p>Especifica a qué formulario pertenece el botón. <a href="https://oregoom.com/html/button/">Etiqueta button &lt;button&gt; - oregoom.</a>.</p>
+          <h4>7. formaction</h4>
+          <p>Especifica la URL a la cual se enviará el formulario cuando se presiona el botón. <a href="https://oregoom.com/html/button/">Etiqueta button &lt;button&gt; - oregoom.</a>.</p>
+          <h4>8. formmethod</h4>
+          <p>Especifica el método HTTP (GET o POST) que se utilizará para enviar el formulario. <a href="https://oregoom.com/html/button/">Etiqueta button &lt;button&gt; - oregoom.</a>.</p>
+          <h4>9. formnovalidate</h4>
+          <p>Define si el formulario debe ser enviado sin validar. <a href="https://oregoom.com/html/button/">Etiqueta button &lt;button&gt; - oregoom.</a>.</p>
+          <h4>10. formtarget</h4>
+          <p>Especifica a dónde se abrirá el resultado de enviar el formulario. <a href="https://oregoom.com/html/button/">Etiqueta button &lt;button&gt; - oregoom.</a>.
+          </p>
+          <h4>11. accesskey</h4>
+          <p>Especifica una tecla de acceso para el botón. <a href="https://oregoom.com/html/button/">Etiqueta button &lt;button&gt; - oregoom.</a>.</p>
+          <p>Además de los atributos mencionados anteriormente, la etiqueta &lt;button&gt; de HTML5 también admite los atributos globales de HTML, como id, class, style, title, entre otros.</p>
+          <h3>25.2. Tag details</h3>
+          <p>Define un bloque de contenido alternable con un resumen y detalles adicionales. (traducido con deepl) <a href="https://htmlreference.io/element/button/">Tag button - htmlreference.io</a>.</p>
+          <p>La etiqueta <span class="bold">&lt;details&gt;</span> de HTML5 es un elemento de contenedor utilizado para proporcionar una forma de mostrar y ocultar contenido adicional en una página web. El contenido se oculta detrás de un resumen o título que se puede hacer clic para mostrar el contenido.</p>
+          <p>
+            El uso típico es para mostrar una descripción detallada, una lista de elementos o cualquier otro contenido adicional que no sea esencial para el contenido principal de la página. <a href="https://oregoom.com/html/button/">Etiqueta &lt;button&gt; - oregoom.</a>.
+          </p>
+          <h3>Atributos de tag details</h3>
+          <h4>open</h4>
+          <p>Define si los detalles adicionales se muestran por defecto o no. <span class="bgcolor"><span class="bold">"true"</span></span> Los detalles adicionales son visibles por defecto. (Traducido por DeepL) <a href="https://htmlreference.io/element/button/">Tag button - htmlreference.io</a>. </p>
+          <p>Especifica si el contenido dentro de la etiqueta <span class="bold">&lt;details&gt;</span> es visible al cargar la página. Si el atributo está presente, el contenido se mostrará de forma predeterminada, si no está presente el contenido estará oculto y se tendrá que hacer click en el título para mostrarlo.</p>
+          <h3>25.3 Tag summary</h3>
+          <p>La etiqueta <span class="bold">&lt;summary&gt;</span> de HTML5 se utiliza para proporcionar un resumen o título para un elemento <span class="bold">&lt;details&gt;</span>. Es una etiqueta de bloque que se utiliza dentro del elemento <span class="bold">&lt;details&gt;</span> para proporcionar información adicional sobre el contenido dentro del elemento <span class="bold">&lt;details&gt;</span>.</p>
+          <p>El contenido dentro de <span class="bold">&lt;summary&gt;</span> se mostrará como el título del elemento <span class="bold">&lt;details&gt;</span> y se utilizará como el primer elemento dentro del elemento <span class="bold">&lt;details&gt;</span> al ser mostrado. <a href="https://oregoom.com/html/summary/">Etiqueta &lt;summary&gt; - oregoom</a>.</p>
+          <p>Define el resumen del elemento &lt;details.&gt; (Traducido con DeepL) <a href="https://htmlreference.io/element/summary/">Tag summary - htmlreference.io</a></p>
+          <h3>25.4. Tag Dialog (experimental)</h3>
+          <p>La etiqueta <span class="bold">&lt;dialog&gt;</span> de HTML5 es un elemento que permite mostrar un cuadro de diálogo modal en una página web. Un cuadro de diálogo modal es una ventana emergente que bloquea el contenido principal de la página hasta que el usuario toma una acción, como hacer clic en un botón o cerrar la ventana.</p>
+          <p>La etiqueta <span class="bold">&lt;dialog&gt;</span> se utiliza para contener el contenido de la ventana emergente, que puede incluir cualquier tipo de elementos HTML. El atributo open es opcional y si se utiliza, especifica que el cuadro de diálogo se muestra al cargar la página.</p>  
+          <p>Para mostrar y ocultar el cuadro de diálogo, se puede utilizar el método <span class="bgcolor">show()</span> y <span class="bgcolor">close()</span> respectivamente. <a href="https://oregoom.com/html/dialog/">Etiqueta &lt;dialog&gt; - oregoom</a>.</p> 
+          <p>Define un cuadro de diálogo que se puede abrir y cerrar con JavaScript.</p>
+          <h3>Atributo de la etiqueta dialog</h3>
+          <p><span class="bold">Open:</span> No se requiere ningún valor. Abre el cuadro de diálogo por defecto. No se requiere ningún valor. (Traducido con DeepL) <a href="https://htmlreference.io/element/dialog/">Tag dialog - htmlreference.io</a>.</p>
+        </article>
+        <div class="block-code">
+          <pre><code>&lt;<span class="keyword">button</span>  <span class="atributes">onclick</span>=""&gt;Esto es un boton&lt;/<span class="keyword">button</span><br>&lt;<span class="keyword">details</span>&gt;Define un bloque de contenido alternable con un resumen y detalles adicionales.<br>    &lt;<span class="keyword">summary</span>&gt;Título del acordeon.&lt;/<span class="keyword">summary</span>&gt;<br>    &lt;<span class="keyword">article</span>&gt;<br>        &lt;<span class="keyword">h3</span>&gt;Contenido del acordeon&lt;/<span class="keyword">h3</span>&gt;<br>        &lt;<span class="keyword">p</span>&gt;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius autem cumque minima ea esse veniam alias eligendi officiis doloremque, aspernatur fugiat deleniti maiores repellendus voluptates assumenda ducimus doloribus enim perferendis?&lt;/<span class="keyword">p</span>&gt;<br>        &lt;<span class="keyword">img</span> <span class="atributes">src</span>=" <span class="value">assets/kEnAi.svg</span>" <span class="atributes">alt</span>=" <span class="value">logo de kenai</span>" &gt;<br>        &lt;<span class="keyword">p</span>&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut culpa ea aliquid nemo ex fugit a eos autem odio. Expedita repudiandae cumque quis vero, eos officiis! Quas laborum officiis voluptatum.&lt;/<span class="keyword">p</span>&gt;<br>        &lt;<span class="keyword">p</span>&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis accusamus libero quod vitae laudantium similique sunt ut officia! Odit sapiente a nulla voluptatem, qui placeat fugiat earum nemo totam quidem.&lt;/<span class="keyword">p</span>&gt;<br>    &lt;/<span class="keyword">article</span>&gt;<br>&lt;/<span class="keyword">details</span>&gt;<br>&lt;<span class="keyword">dialog</span>&gt;Esto es una ventana modal&lt;/<span class="keyword">dialog</span>&gt;<br>&lt;<span class="keyword">details</span><span class="atributes">open</span>&gt;Open - abiertos&lt;/<span class="keyword">details</span>&gt;<br>&lt;<span class="keyword">details</span>&gt;Open - abiertos&lt;/<span class="keyword">details</span>&gt;</code></pre>
+        </div>
+        <fieldset class="tag_text interactive_elem">
+          <button onclick="">Esto es un boton.</button>
+          <details>Define un bloque de contenido alternable con un resumen y detalles adicionales.
+            <summary>Título del acordeon.</summary>
+            <article>
+              <h3>Contenido del acordeon</h3>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius autem cumque minima ea esse veniam alias eligendi officiis doloremque, aspernatur fugiat deleniti maiores repellendus voluptates assumenda ducimus doloribus enim perferendis?</p>
+              <img src="assets/kEnAi.svg" alt="logo de kenai">
+              <img src="assets/myDogPrincess1.jpg" alt="mi perrita princess">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut culpa ea aliquid nemo ex fugit a eos autem odio. Expedita repudiandae cumque quis vero, eos officiis! Quas laborum officiis voluptatum.</p>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis accusamus libero quod vitae laudantium similique sunt ut officia! Odit sapiente a nulla voluptatem, qui placeat fugiat earum nemo totam quidem.</p>
+            </article>
+          </details>
+          <dialog>Esto es una ventana modal</dialog>
+          <details open>Open - abiertos</details>
+          <details>Open - abiertos</details>
+
+        </fieldset>
+      </div>
+
+      <hr>
+      <div id="tag_audio_video" class="tag_audio_video">
+        <h2>26. Etiqueta &lt;audio&gt; y &lt;video&gt; <span class="span-btn">
+          <a class="btn-main" href="#ind-tag_audio_video">Volver al Índice &#x2b06;&#xfe0f;</a>
+        </span></h2>
+        <article>
+          <h3>1. Etiqueta &lt;audio&gt; </h3>
+          <p>La etiqueta &lt;audio&gt; en HTML es utilizada para reproducir audio en una página web. Es un elemento de bloque que permite mostrar un reproductor de audio en el navegador, permitiendo al usuario reproducir, detener, avanzar y retroceder el audio.<a href="https://oregoom.com/html/audio/">Etiqueta &lt;audio&gt; - oregoom.</a>.</p>
+          <p>Permite incrustar un clip de audio en una página web (traducido con DeepL)<a href="https://htmlreference.io/element/audio/">Tag audio - htmlreference.io</a>.</p>
+          <h3>1.1. Atributos de Tag audio</h3>
+          <h4>1. src. (<span class="required">required</span>)</h4>
+          <p><span class="bold">src: </span>1. Define la fuente del archivo de audio. Es <span class="bold">Obligatorio.</span> <span class="bold"><span class="bgcolor">"/assets/Hal.mp3"</span></span> Puede utilizar una ruta relativa. (traducido con deepl) <a href="https://htmlreference.io/element/audio/">Tag audio - htmlreference.io</a>.</p>
+          <p>2. Especifica la ruta del archivo de audio que se reproducirá. Este atributo es esencial para indicar cuál es el archivo de audio que se va a reproducir. <a href="https://oregoom.com/html/audio/">Etiqueta &lt;audio&gt; - oregoom.</a>.</p>
+          <h4>2. volume.</h4>
+          <p><span class="bold">volume: </span>Ajusta el volumen. Entre 0,0 (silencioso) y 1,0 (más alto). <span class="bold"><span class="bgcolor">"0.0"</span></span>  La pista está en silencio. <span class="bold"><span class="bgcolor">"1.0" </span></span>La pista se ajusta al máximo volumen. (traducido con deepl) <a href="https://htmlreference.io/element/audio/">Tag audio - htmlreference.io</a>.</p>
+          <h4>3. autoplay</h4>
+          <p><span class="bold">autoplay:</span>1. La pista se iniciará automáticamente al cargarse. <i>--No requiere ningún valor--</i>. (traducido con deepl) <a href="https://htmlreference.io/element/audio/"> Tag audio - htmlreference.io </a>.</p>
+          <p>2. Hace que el audio se reproduzca automáticamente al cargar la página. Este atributo es importante para dar una experiencia más fluida al usuario. <a href="https://oregoom.com/html/audio/">Etiqueta &lt;audio&gt; - oregoom.</a>.</p>
+          <h4>4. controls</h4>
+          <p><span class="bold">controls:</span>1. Muestra los controles de audio integrados en el navegador. <i>--No requiere ningún valor--</i>. (traducido con deepl) <a href="https://htmlreference.io/element/audio/">Tag audio - htmlreference.io</a>.</p>
+          <p>2. Muestra los controles de reproducción del reproductor de audio. Este atributo es importante para permitir al usuario controlar la reproducción del audio. <a href="https://oregoom.com/html/audio/">Etiqueta &lt;audio&gt; - oregoom.</a>.</p>
+          <h4>5. loop</h4>
+          <p><span class="bold">loop:</span> La pista se reproducirá en bucle cuando llegue al final. <i>--No requiere ningún valor--</i>. (traducido con deepl) <a href="https://htmlreference.io/element/audio/">Tag audio - htmlreference.io</a>.</p>
+          <p>2. Hace que el audio se repita automáticamente una vez que termina. Este atributo es importante para permitir al usuario escuchar el audio de forma continua. <a href="https://oregoom.com/html/audio/">Etiqueta &lt;audio&gt; - oregoom.</a>.</p>
+          <h4>6. muted</h4>
+          <p><span class="bold">muted:</span> La pista se silenciará por defecto. <i>--No requiere ningún valor--</i>. (traducido con deepl) <a href="https://htmlreference.io/element/audio/">Tag audio - htmlreference.io</a>.</p>
+          <h4>7. preload</h4>
+          <p><span class="bold">preload:</span> La pista se precargará cuando se cargue la página. <i>--No requiere ningún valor--</i>. (traducido con deepl) <a href="https://htmlreference.io/element/audio/">Tag audio - htmlreference.io</a>.</p>
+          <h3>1.2 Formatos de audio</h3>
+          <p>Los formatos de audio más comúnmente soportados por los navegadores para la etiqueta <span class="bold">&lt;audio&gt;</span> son:</p>
+          <ul>
+            <li><span class="bold">MP3 (MPEG-1 Audio Layer III)</span>: Es un formato de audio muy popular y ampliamente compatible con la mayoría de los navegadores.</li>
+            <li><span class="bold">OGG (Ogg Vorbis)</span>: Es un formato de audio libre y de código abierto, compatible con la mayoría de los navegadores modernos.</li>
+            <li><span class="bold">WAV (Waveform Audio File Format)</span>: Es un formato de audio no comprimido, que proporciona una alta calidad de sonido, aunque su tamaño de archivo es relativamente grande.</li>
+            <li><span class="bold">AAC (Advanced Audio Coding)</span>: Es un formato de audio desarrollado por MPEG-4 y es ampliamente compatible con los navegadores móviles.</li>
+          </ul>
+          <p>
+            Es importante mencionar que algunos navegadores pueden soportar otros formatos de audio, como FLAC, ALAC, y AIFF, y algunos navegadores no soportan algunos de los formatos mencionados anteriormente, por lo que es recomendable proporcionar varios formatos de audio para garantizar la compatibilidad con la mayoría de los navegadores. <a href="https://oregoom.com/html/audio/">Etiqueta &lt;audio&gt; - oregoom.</a>.
+          </p>
+          <h3>2. Etiqueta &lt;video&gt;</h3>
+          <p>La etiqueta <span class="bold">&lt;video&gt;</span> en HTML es utilizada para insertar videos en una página web. Es un elemento de bloque que permite especificar la fuente del video, así como configurar opciones como el tamaño, el formato y la compatibilidad con dispositivos.<a href="https://oregoom.com/html/audio/">Etiqueta &lt;video&gt; - oregoom.</a>.</p>
+          <p>Permite incrustar un videoclip en una página web. (traducido con deepl) <a href="https://htmlreference.io/element/video/">Tag video - htmlreference.io</a>.</p>
+          <h3>Atributos de Tag video</h3>
+          <h4>1. src. (<span class="required">required</span>)</h4>
+          <p><span class="bold">src: </span>1. Define la fuente del archivo de video. <span class="bold">Es Obligatorio.</span> <span class="bold"><span class="bgcolor">"/assets/Hal.mp3"</span></span> Puede utilizar una ruta relativa. (traducido con deepl) <a href="https://htmlreference.io/element/video/">Tag video - htmlreference.io</a>.</p>
+          <p>2. Especifica la ruta de la fuente del video. <a href="https://oregoom.com/html/audio/">Etiqueta &lt;audio&gt; - oregoom.</a>.</p>
+          <h4>2. autoplay</h4>
+          <p><span class="bold">autoplay:</span>1. El video se iniciará automáticamente al cargarse. <i>--No requiere ningún valor--</i>. (traducido con deepl) <a href="https://htmlreference.io/element/video/">Tag video - htmlreference.io</a>.</p>
+          <p>2. Define si el video debe reproducirse automáticamente. <a href="https://oregoom.com/html/video/">Etiqueta &lt;video&gt; - oregoom.</a>.</p>
+          <h4>3. controls</h4>
+          <p><span class="bold">controls:</span>1. Muestra los controles de audio integrados en el navegador. <i>--No requiere ningún valor--</i>. (traducido con deepl) <a href="https://htmlreference.io/element/video/">Tag video - htmlreference.io</a>.</p>
+          <p>2. Define si se deben mostrar los controles del video. <a href="https://oregoom.com/html/video/">Etiqueta &lt;video&gt; - oregoom.</a>.</p>
+          <h4>4. loop</h4>
+          <p><span class="bold">loop:</span> 1. El video se reproducirá en bucle cuando llegue al final. <i>--No requiere ningún valor--</i>. (traducido con deepl) <a href="https://htmlreference.io/element/video/">Tag video - htmlreference.io</a>.</p>
+          <p>2. Define si el video debe reproducirse en bucle. <a href="https://oregoom.com/html/video/">Etiqueta &lt;video&gt; - oregoom.</a>.</p>
+          <h4>6. muted</h4>
+          <p><span class="bold">muted:</span>El video se silenciará por defecto. <i>--No requiere ningún valor--</i>. (traducido con deepl) <a href="https://htmlreference.io/element/video/">Tag video - htmlreference.io</a>.</p>
+          <p>2. Define si el video debe iniciar sin sonido. <a href="https://oregoom.com/html/video/">Etiqueta &lt;video&gt; - oregoom.</a>.</p>
+          <h4>7. preload</h4>
+          <p><span class="bold">preload:</span> 1. El video se precargará cuando se cargue la página. <i>--No requiere ningún valor--</i>. (traducido con deepl) <a href="https://htmlreference.io/element/video/">Tag video - htmlreference.io</a>.</p>
+          <p>2. Especifica cómo se deben cargar los datos del video</p>
+          <h4>8. poster</h4>
+          <p><span class="bold">poster:</span> 1. Define una imagen que se mostrará hasta que se reproduzca el vídeo. Si no se proporciona ningún cartel, se utilizará el primer fotograma del vídeo. (traducido con deepl) <a href="https://htmlreference.io/element/video/">Tag video - htmlreference.io</a>.</p>
+          <p>2. Especifica una imagen que se mostrará antes de reproducir el video. <a href="https://oregoom.com/html/video/">Etiqueta &lt;video&gt; - oregoom</a>.</p>
+          <h4>9. height</h4>
+          <p>Define la altura del vídeo en píxeles. (traducido con deepl) <a href="https://htmlreference.io/element/video/">Tag video - htmlreference.io</a>.</p>
+          <h4>10. width</h4>
+          <p>Define el ancho del vídeo en píxeles. (traducido con deepl) <a href="https://htmlreference.io/element/video/">Tag video - htmlreference.io</a>.</p>
+          <h4>11. playsinline</h4>
+          <p><span class="bold">playsinline:</span> define si el video se reproducirá dentro del contenido o en una ventana emergente. <a href="https://oregoom.com/html/video/">Etiqueta &lt;video&gt; - oregoom</a>.</p>
+          <p><span class="bold">type:</span> especifica el tipo de formato del video. <a href="https://oregoom.com/html/video/">Etiqueta &lt;video&gt; - oregoom</a>.</p>
+          <p>Sin embargo, es importante mencionar que algunos de estos atributos pueden no ser soportados por todos los navegadores y algunos pueden ser obsoletos.</p>
+        </article>
+        <div class="block-code">
+          <pre><code><span class="comment">&lt;!-- Etiqueta de audio. todos los tags tendran el atributo controls a fin de poder visualizarlos--&gt;</span><br>&lt;<span class="keyword">audio</span> <span class="atributes">src</span>="" <span class="atributes">controls</span>&gt;&lt;/<span class="keyword">audio</span>&gt;<br>&lt;<span class="keyword">audio</span> <span class="atributes">src</span>="" <span class="atributes">controls</span><span class="atributes"> autoplay</span>&gt;&lt;/<span class="keyword">audio</span>&gt;<br>&lt;<span class="keyword">audio</span> <span class="atributes">src</span>="" <span class="atributes">controls</span>&gt;&lt;/<span class="keyword">audio</span>&gt;<br>&lt;<span class="keyword">audio</span> <span class="atributes">src</span>="" <span class="atributes">controls</span> <span class="atributes">loop</span>&gt;&lt;/<span class="keyword">audio</span>&gt;<br>&lt;<span class="keyword">audio</span> <span class="atributes">src</span>="" <span class="atributes">controls</span> <span class="atributes">muted</span> &gt;&lt;/<span class="keyword">audio</span>&gt;<br>&lt;<span class="keyword">audio</span> <span class="atributes">src</span>="" <span class="atributes">controls</span> <span class="atributes">preload</span>&gt;&lt;/<span class="keyword">audio</span>&gt;<br><span class="comment">&lt;!--Crear un reproductor de audio con la pista en silencio.--&gt;</span><br>&lt;<span class="keyword">audio</span> <span class="atributes">src</span>="" <span class="atributes">controls</span> <span class="atributes">volume</span>="<span class="value">0.0</span>"&gt;&lt;/<span class="keyword">audio</span>&gt;<br><span class="comment">&lt;!--Crear un reproductor de audio con la pista al maximo volumen.--&gt;</span><br>&lt;<span class="keyword">audio</span> <span class="atributes">src</span>="" <span class="atributes">controls</span> <span class="atributes">volume</span>="<span class="value">1.0</span>"&gt;&lt;/<span class="keyword">audio</span>&gt;<br><span class="comment">&lt;!--Crear un reproductor de audio con controles y que se reproduzca automáticamente y se repita continuamente--&gt;<br></span>&lt;<span class="keyword">audio</span> <span class="atributes">src</span>="" <span class="atributes">controls</span> <span class="atributes">autoplay</span> <span class="atributes">loop</span>&gt;&lt;/<span class="keyword">audio</span>&gt;<br>&lt;<span class="keyword">audio</span> <span class="atributes">src</span>="" <span class="atributes">controls</span> <span class="atributes">preload</span>=""&gt;&lt;/<span class="keyword">audio</span>&gt;<br><br><span class="comment">&lt;!-- Etiqueta de video. igual que con la tag audio se establecera el atributo controls para poder visualizarlo. --&gt;</span><br>&lt;<span class="keyword">video</span> <span class="atributes">src</span>="" <span class="atributes">controls</span>&gt;&lt;/<span class="keyword">video</span>&gt;<br>&lt;<span class="keyword">video</span> <span class="atributes">src</span>="" <span class="atributes">controls</span> <span class="atributes">autoplay</span>&gt;&lt;/<span class="keyword">video</span>&gt;<br>&lt;<span class="keyword">video</span> <span class="atributes">src</span>="" <span class="atributes">controls</span>&gt;&lt;/<span class="keyword">video</span>&gt;<br>&lt;<span class="keyword">video</span> <span class="atributes">src</span>="" <span class="atributes">controls</span> <span class="atributes">loop</span>=""&gt;&lt;/<span class="keyword">video</span>&gt;<br>&lt;<span class="keyword">video</span> <span class="atributes">src</span>="" <span class="atributes">controls</span> <span class="atributes">muted</span>=""&gt;&lt;/<span class="keyword">video</span>&gt;<br>&lt;<span class="keyword">video</span> <span class="atributes">src</span>="" <span class="atributes">controls</span> <span class="atributes">preload</span>=""&gt;&lt;/<span class="keyword">video</span>&gt;<br>&lt;<span class="keyword">video</span> <span class="atributes">src</span>="" <span class="atributes">controls</span> <span class="atributes">poster </span>=<span class="value"> "/images/html-reference-share.png"</span>&gt;&lt;/<span class="keyword">video</span>&gt;<br>&lt;<span class="keyword">video</span> <span class="atributes">src</span>="" <span class="atributes">controls</span> <span class="atributes">height</span>=<span class="value">"90"</span>&gt;&lt;/<span class="keyword">video</span>&gt;<br>&lt;<span class="keyword">video</span> <span class="atributes">src</span>="" <span class="atributes">controls</span> <span class="atributes">width</span>=<span class="value">"120"</span>&gt;&lt;/<span class="keyword">video</span>&gt;<br></code></pre>
+        </div>
+        <fieldset class="tag_text audio_video">
+          <audio src="media/08-hiphop-star-intro-129067.mp3" controls autoplay></audio>
+          <audio src="media/08-hiphop-star-intro-129067.mp3" controls controls></audio>
+          <audio src="media/08-hiphop-star-intro-129067.mp3" controls loop></audio>
+          <audio src="media/08-hiphop-star-intro-129067.mp3" controls muted></audio>
+          <audio src="media/08-hiphop-star-intro-129067.mp3" controls preload></audio>
+          <audio src="media/08-hiphop-star-intro-129067.mp3" controls volume="0.0"></audio>
+          <audio src="media/08-hiphop-star-intro-129067.mp3" controls volume="1.0"></audio>
+          <audio src="media/08-hiphop-star-intro-129067.mp3" controls autoplay loop></audio>
+          <audio src="media/08-hiphop-star-intro-129067.mp3
+          " controls preload=""></audio>
+          <br>
+          <video src="" controls></video>
+          <video src="" controls autoplay></video>
+          <video src="" controls></video>
+          <video src="" controls loop></video>
+          <video src="" controls muted></video>
+          <video src="" controls preload></video>
+          <video src="" controls poster="/images/html-reference-share.png"></video>
+          <video src="" controls height="90"></video>
+          <video src="" controls width="160"></video>
+          <video src="" controls controls preload=""></video>
+        </fieldset>
+      </div>
+
+      <hr>
+      <div id="tag_iframe" class="tag_iframe">
+        <h2>26. Etiqueta &lt;iframe&gt; <span class="span-btn">
+          <a class="btn-main" href="#ind-tag_iframe">Volver al Índice &#x2b06;&#xfe0f;</a>
+        </span></h2>
+        <article>
+          <p>Define un contenedor para un contexto de navegación anidado: puede incluir una página web dentro de otra página web. (Traducido con DeepL) <a href="https://htmlreference.io/element/iframe/">Tag iframe - htmlreference.io</a></p>
+          <p>La etiqueta &lt;iframe&gt; en HTML se utiliza para insertar contenido de otra página web dentro de una página existente. Es similar a la etiqueta <span class="bold">&lt;embed&gt;</span> , pero tiene un mayor soporte en los navegadores y dispositivos. La etiqueta se utiliza dentro de una etiqueta <span class="bold">&lt;body&gt;</span> y requiere un atributo “src” que especifica la ubicación de la página web que se va a insertar. <a href="https://oregoom.com/html/iframe/">Etiqueta &lt;iframe&gt;</a>.</p>
+          <p>Además, el contenido dentro del iframe es completamente independiente del contenido fuera del iframe, por lo que los estilos CSS y scripts JavaScript no se aplicarán al contenido dentro del iframe a menos que se especifique de forma explícita. <a href="https://oregoom.com/html/iframe/">Etiqueta &lt;iframe&gt; - oregoom</a>.</p>
+          <h3>Atributos de Tag iframe</h3>
+          <h4>1. src (<span class="required">required</span>)</h4>
+          <p><span class="bold">src:</span> 1. Define la URL de la página web anidada. Puede escribir cualquier URL. Tenga en cuenta que algunos sitios web no permitirán ser iframed. (Traducido con DeepL) <a href="https://htmlreference.io/element/iframe/">Tag iframe - htmlreference.io</a>.</p>
+          <p>2. Este atributo especifica la ubicación de la página web que se va a insertar en la página actual. Es obligatorio especificar un valor para este atributo. <a href="https://oregoom.com/html/iframe/">Etiqueta &lt;iframe&gt; - oregoom</a>.</p>
+          <h4>2. allowfullscreen</h4>
+          <p><span class="bold">allowfullscreen:</span> 1. Permite al navegador mostrar el iframe en pantalla completa con JavaScript. <i>--No se requiere ningún valor.--</i> (Traducido con DeepL) <a href="https://htmlreference.io/element/iframe/">Tag iframe - htmlreference.io</a>.</p>
+          <p>2. Define si el contenido del iframe se puede ver a pantalla completa <a href="https://oregoom.com/html/iframe/">Etiqueta &lt;iframe&gt; - oregoom</a>.</p>
+          <h4>3. height</h4>
+          <p>Define la altura del iframe en píxeles. (traducido con deepl) <a href="https://htmlreference.io/element/iframe/">Tag iframe - htmlreference.io</a>.</p>
+          <h4>4. width</h4>
+          <p>Define el ancho del iframe en píxeles. (traducido con deepl) <a href="https://htmlreference.io/element/iframe/">Tag iframe - htmlreference.io</a>.</p>
+          <h4>5. name</h4>
+          <p><span class="bold">name:</span> Este atributo especifica el nombre del iframe, el cual se puede utilizar para hacer referencia a él desde otro lugar en la página web. <a href="https://oregoom.com/html/iframe/">Etiqueta &lt;iframe&gt; - oregoom</a>.</p>
+          <h4>6. sandobox</h4>
+          <p><span class="bold">sandbox:</span> Este atributo proporciona una serie de restricciones para el contenido dentro del iframe, como no permitir ejecutar scripts, no permitir formularios, etc. <a href="https://oregoom.com/html/iframe/">Etiqueta &lt;iframe&gt; - oregoom</a>.</p>
+          <h4>7. seamless</h4>
+          <p><span class="bold">seamless:</span> Este atributo define si el borde y el scrollbar del iframe deben ser ocultos o no. <a href="https://oregoom.com/html/iframe/">Etiqueta &lt;iframe&gt; - oregoom</a>.</p>
+          <h4>7. scrolling</h4>
+          <p><span class="bold">scrolling:</span> Este atributo define si se mostrarán barras de desplazamiento en caso de que el contenido sea demasiado grande para el tamaño del iframe. Los valores posibles son “yes”, “no”, “auto”. <a href="https://oregoom.com/html/iframe/">Etiqueta &lt;iframe&gt; - oregoom</a>.</p>
+          <h4>8. srcdoc</h4>
+          <p><span class="bold">srcdoc:</span> Este atributo permite especificar el contenido HTML que se mostrará en el iframe, en lugar de cargarlo desde una URL. <a href="https://oregoom.com/html/iframe/">Etiqueta &lt;iframe&gt; - oregoom</a>.</p>
+          <h4>9. frameborder</h4>
+          <p><span class="bold"> frameborder:</span> Este atributo define si se mostrará un borde alrededor del iframe. <a href="https://oregoom.com/html/iframe/">Etiqueta &lt;iframe&gt; - oregoom</a>.</p>
+        </article>
+        <div class="block-code">
+          <pre><code>&lt;<span class="keyword">iframe</span> <span class="atributes">src</span>= <span class="value">"page_hola.html"</span> <span class="atributes">frameborder</span>=<span class="value">"1"</span>&gt;&lt;/<span class="keyword">iframe</span>&gt;<br>&lt;<span class="keyword"> iframe</span> <span class="atributes">src</span>="https://jonmircha.com/" <span class="atributes">frameborder</span>=<span class="value">"1"</span>&gt;&lt;<span class="keyword">/iframe</span>&gt;<br>&lt;<span class="keyword"> iframe</span> <span class="atributes">src</span>="https://facebook.com/" <span class="atributes">frameborder</span>=<span class="value">"1"</span>&gt;&lt;<span class="keyword">/iframe</span>&gt;<br><span class="comment">&lt;!--No funciona - Las social media por lo general lo remiten. --&gt;</span><br>&lt;<span class="keyword">iframe</span> <span class="atributes">src</span>=<span class="value">"media/emmet-cheat-sheet.pdf"</span> <span class="atributes"> frameborder</span>=<span class="value">"1"</span>&gt;&lt;<span class="keyword">/iframe</span>&gt;<br>&lt;<span class="keyword">iframe</span> <span class="atributes">src</span>= <span class="value"> "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.558822453498!2d-74.80055502582434!3d10.99663515509502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d7682e1a887%3A0x3639be1de8d903e9!2sCl.%2068%20%2353-45%2C%20Nte.%20Centro%20Historico%2C%20Barranquilla%2C%20Atl%C3%A1ntico!5e0!3m2!1ses-419!2sco!4v1692677143765!5m2!1ses-419!2sco"</span> <span class="atributes">width</span>=<span class="value"> "600"</span> <span class="atributes">height</span>=<span class="value"> "450"</span> <span class="atributes">style</span>=<span class="value"> "border:0;"</span> <span class="atributes">allowfullscreen</span>=<span class="value"> ""</span> <span class="atributes">loading</span>=<span class="value"> "lazy"</span> <span class="atributes">referrerpolicy</span>=<span class="value"> "no-referrer-when-downgrade"</span>&gt;&lt;/<span class="keyword">iframe</span>&gt;<br>&lt;<span class="keyword">iframe</span> <span class="atributes"> width</span>=<span class="value">"560"</span> <span class="atributes"> height</span>=<span class="value">"315"</span> <span class="atributes"> src</span>= <span class="value">"https://www.youtube.com/embed/F55LNTW3GE0"</span> <span class="atributes"> title</span>= <span class="value">"YouTube video player"</span>  <span class="atributes"> frameborder</span>= <span class="value">"0"</span> <span class="atributes"> allow</span>= <span class="value"> "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"</span> <span class="atributes"> allowfullscreen</span>&gt;&lt;/<span class="keyword">iframe</span>&gt;
+          </code></pre>
+        </div>
+        <fieldset class="tag_text iframe">
+          <iframe src="page_hola.html" frameborder="1"></iframe><br>
+          <iframe src="https://jonmircha.com/" frameborder="1"></iframe><br>
+          <iframe src="https://facebook.com/" frameborder="1"></iframe><br>
+          <!--No funciona - Las social media por lo general lo remiten. -->
+          <!-- <iframe src="media/emmet-cheat-sheet.pdf" frameborder="1"></iframe> -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.558822453498!2d-74.80055502582434!3d10.99663515509502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d7682e1a887%3A0x3639be1de8d903e9!2sCl.%2068%20%2353-45%2C%20Nte.%20Centro%20Historico%2C%20Barranquilla%2C%20Atl%C3%A1ntico!5e0!3m2!1ses-419!2sco!4v1692677143765!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/F55LNTW3GE0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </fieldset>
+      </div>
+
+      <hr>
+      <div id="tag_element_forms" class="tag_element_forms">
+        <h2>28. Etiquetas y Elementos de Formulario <span class="span-btn">
+          <a class="btn-main" href="#ind-tag_element_forms">Volver al Índice &#x2b06;&#xfe0f;</a>
+        </span></h2>
+        <article>
+          <h3>28.1 Etiqueta &lt;input&gt;</h3>
+          <p>Define un control interactivo dentro de un formulario web. (Traducido con DeepL) <a href="https://htmlreference.io/element/input/">Tag input - htmlreference.io</a>.</p>
+          <h3>Tipos de Input</h3>
+          <p>Mediante el atributo <span class="bgcolor">type</span> se define el tipo de formulario. (Traducido con DeepL) <a href="https://htmlreference.io/element/input/">Tag input - htmlreference.io</a>.</p>
+          <p>A continuación tenemos los siguientes tipos de input:</p>
+          <h4>1. "text"</h4>
+          <p>1- Entrada de texto simple de una sola línea que acepta cualquier tipo de carácter (Traducido con DeepL) <a href="https://htmlreference.io/element/input/">Tag input - htmlreference.io</a>.</p>
+          <p>2- Para crear un campo de entrada de texto simple, se utiliza el tipo “text”. Los usuarios pueden ingresar cualquier cadena de texto en este campo. <a href="https://oregoom.com/html/input/">Etiqueta &lt;input&gt; - oregoom</a>.</p>
+          <h4>2. "checkbox"</h4>
+          <p>1- Una casilla de verificación que sólo puede estar marcada o desmarcada. El valor sólo es enviado por el formulario si la casilla de verificación está marcada. Puede envolver una casilla de verificación en una etiqueta, para aumentar el área de clic. <a href="https://htmlreference.io/element/input/">Tag input - htmlreference.io</a>.</p>
+          <div class="block-code">
+            <pre><code>&lt;<span class="keyword">label</span>&gt;<br>  &lt;<span class="keyword">input</span> <span class="atributes">type</span>="<span class="value">checkbox</span>"&gt;<br>      I accept the terms and conditions <br>&lt;/<span class="keyword">label</span>&gt;</code></pre>
+          </div>
+          <fieldset class="tag_text">
+            <label><input type="checkbox"> I accept the terms and conditions </label>
+          </fieldset>
+          <p>Observe cómo al hacer clic en el texto se activa la casilla de verificación. (Traducido con DeepL) <a href="https://htmlreference.io/element/input/">Tag input - htmlreference.io</a>.</p>
+          <p>2- Las casillas de verificación permiten a los usuarios seleccionar múltiples opciones de una lista. Para crear una casilla de verificación, utiliza el tipo “checkbox”. <a href="https://oregoom.com/html/input/">Etiqueta &lt;input&gt; - oregoom</a>.</p>
+          <h4>3. "radio"</h4>
+          <p>1- Debe utilizarse en combinación con otros botones de opción, de modo que se excluyan mutuamente. Los botones de opción se vinculan mediante un valor de nombre similar:</p>
+          <div class="block-code">
+            <pre><code>&lt;<span class="keyword">label</span>&gt;<br>  &lt;<span class="keyword">input</span> <span class="atributes">type</span>="<span class="value">radio</span>" <span class="atributes">name</span>="<span class="value">newsletter</span>" <span class="atributes">value</span>="<span class="value">yes</span>"&gt;<br>   Yes<br>&lt;/<span class="keyword">label</span>&gt;<br>&lt;<span class="keyword">label</span>&gt;<br>  &lt;<span class="keyword">input</span> <span class="atributes">type</span>="<span class="value">radio</span>" <span class="atributes">name</span>="<span class="value">newsletter</span>" <span class="atributes">value</span>="<span class="value">no</span>"&gt;<br>   No<br>&lt;/<span class="keyword">label</span>&gt;<br></code></pre>
+          </div>
+          <fieldset class="tag_text">
+            <label>
+              <input type="radio" name="newsletter" value="yes">
+                Yes
+            </label>
+            <label>
+              <input type="radio" name="newsletter" value="no">
+                No
+            </label>
+          </fieldset>
+          <p>Observe cómo al hacer clic en uno se anula la selección del otro. (Traducido con DeepL) <a href="https://htmlreference.io/element/input/">Tag input - htmlreference.io</a>.</p>
+          <p>2- Los botones de opción permiten seleccionar una única opción de un conjunto. Para crear botones de opción, usa el tipo “radio”. <a href="https://oregoom.com/html/input/">Etiqueta &lt;input&gt; - oregoom</a>.</p>
+          <h4>4. "date"</h4>
+          <p>El tipo “date” crea un campo de entrada para seleccionar fechas utilizando un selector de fecha nativo del navegador. <a href="https://oregoom.com/html/input/">Etiqueta &lt;input&gt; - oregoom</a>.</p>
+          <h4>5. "color"</h4>
+          <p>Se utiliza para los campos de entrada que deben contener un color. Dependiendo de la compatibilidad del navegador, puede aparecer un selector de color en el campo de entrada. (traducido con DeepL) <a href="https://www.w3schools.com/html/html_form_input_types.asp">Tag &lt;input&gt; - w3schools</a>.</p>
+          <h4>6. "button"</h4>
+          <p>El tipo “button” crea un botón genérico que puede usarse para diversas acciones en la página, como abrir una ventana emergente, enviar datos mediante JavaScript, etc.</p>
+          <p>Puedes agregar funcionalidad adicional utilizando JavaScript y escuchando el evento click en el botón. <a href="https://oregoom.com/html/input/">Etiqueta &lt;input&gt; - oregoom</a>.</p>
+          <h4>7. "submit"</h4>
+          <p>1- Botón de envío que se activa al hacer clic o al pulsar Intro. (Traducido con DeepL) <a href="https://htmlreference.io/element/input/">Tag input - htmlreference.io</a>.</p>
+          <p>2- El tipo submit crea un botón que, al hacer clic, envía el formulario y sus datos al servidor. Generalmente, se especifica un atributo action en la etiqueta &lt;form&gt; para indicar el destino del envío del formulario. <a href="https://oregoom.com/html/input/">Etiqueta &lt;input&gt; - oregoom</a>.</p>
+          <h4>8. "reset"</h4>
+          <p>define un botón de reinicio que restablecerá todos los valores del formulario a sus valores por defecto. (traducido con DeepL) <a href="https://www.w3schools.com/html/html_form_input_types.asp">Tag &lt;input&gt; - w3schools</a>.</p>
+          <h4>9. "file"</h4>
+          <p>Para permitir a los usuarios cargar archivos, utiliza el tipo “file”. Los usuarios pueden seleccionar un archivo de su dispositivo utilizando el cuadro de diálogo de carga de archivos. <a href="https://oregoom.com/html/input/">Etiqueta &lt;input&gt; - oregoom</a>.</p>
+          <h4>10.hidden (oculto)</h4>
+          <p>Define un campo de entrada oculto (no visible para un usuario).</p>
+          <p>Un campo oculto permite a los desarrolladores web incluir datos que los usuarios no pueden ver ni modificar cuando se envía un formulario.</p>
+          <p>Un campo oculto suele almacenar un registro de la base de datos que debe actualizarse cuando se envía el formulario.</p>
+          <p><span class="bold">Nota:</span> Aunque el valor no se muestra al usuario en el contenido de la página, es visible (y puede editarse) utilizando las herramientas de desarrollo de cualquier navegador o la función "Ver fuente". No utilice entradas ocultas como forma de seguridad. (traducido con DeepL) <a href="https://www.w3schools.com/html/html_form_input_types.asp">Tag &lt;input&gt; - w3schools.</a>.</p>
+          <h4>11. "email"</h4>
+          <p>1- Como una entrada de texto, pero el navegador intentará permitir sólo direcciones de correo electrónico válidas. En los dispositivos móviles, aparecerá el teclado del correo electrónico. (Traducido con DeepL) <a href="https://htmlreference.io/element/input/">Tag input - htmlreference.io</a>.</p>
+          <p>2- Para crear un campo de entrada específico para direcciones de correo electrónico, utiliza el tipo “email”. Este tipo de campo proporciona una validación básica de correo electrónico de forma automática. <a href="https://oregoom.com/html/input/">Etiqueta &lt;input&gt; - oregoom</a>.</p>
+          <h4>12. "number"</h4>
+          <p>1- Como una entrada de texto, pero el navegador intentará permitir sólo números válidos. En los dispositivos móviles, aparecerá el teclado numérico. (Traducido con DeepL) <a href="https://htmlreference.io/element/input/">Tag input - htmlreference.io</a>.</p>
+          <p>2- El tipo “number” crea un campo de entrada para ingresar valores numéricos. Puedes especificar el rango de números permitidos utilizando los atributos <span class="bgcolor"> min y max.</span> <a href="https://oregoom.com/html/input/">Etiqueta &lt;input&gt; - oregoom</a>.</p>
+          <h4>13. "tel"</h4>
+          <p>Para crear un campo de entrada específico para números de teléfono, utiliza el tipo “tel”. Aunque este tipo de campo no proporciona una validación automática, ofrece una mejor experiencia de usuario en dispositivos móviles al mostrar el teclado numérico adecuado. <a href="https://oregoom.com/html/input/">Etiqueta &lt;input&gt; - oregoom</a>.</p>
+          <h4>14. "password" (contraseña)</h4>
+          <p>1. El tipo “password” crea un campo de entrada donde los caracteres ingresados se ocultan, lo que es útil para ingresar contraseñas de manera segura. <a href="https://oregoom.com/html/input/">Etiqueta &lt;input&gt; - oregoom</a>.</p>
+          <p>2. Define un campo de contraseña. (traducido con DeepL) <a href="https://www.w3schools.com/html/html_form_input_types.asp">Tag &lt;input&gt; w3schools</a></p>
+          <h4>15. "search" - busqueda</h4>
+          <p>Se utiliza para los campos de búsqueda (un campo de búsqueda se comporta como un campo de texto normal). (traducido con DeepL) <a href="https://www.w3schools.com/html/html_form_input_types.asp">Tag &lt;input&gt; w3schools</a>. </p>
+          <div class="block-code">
+            <pre><code>&lt;<span class="keyword">label</span> <span class="atributes">for</span>"<span class="value">gsearch</span>"&gt; Search Google:&lt;/<span class="keyword">label</span>&gt;<br>    &lt;<span class="keyword">input</span> <span class="atributes">type</span><span class="value"></span>="<span class="value">search</span>" <span class="atributes">id</span><span class="value"></span>="<span class="value">gsearch</span>"  <span class="atributes">name</span><span class="value"></span>="<span class="value">gsearch</span>"&gt;</code></pre>
+          </div>
+          <fieldset class="tag_text">
+            <label for="gsearch">Search Google:</label>
+            <input type="search" id="gsearch" name="gsearch">
+          </fieldset>
+          <h4>16. "range"</h4>
+          <p>1. El tipo “range” crea un control deslizante que permite a los usuarios seleccionar un valor dentro de un rango específico. Puedes establecer el rango utilizando los atributos <span class="bgcolor"> min, max y step.</span> <a href="https://oregoom.com/html/input/">Etiqueta &lt;input&gt; - oregoom</a>.</p>
+          <p>2. El &lt;input type="range"&gt; define un control para introducir un número cuyo valor exacto no es importante (como un control deslizante). El rango por defecto es de 0 a 100. Sin embargo, puede establecer restricciones sobre qué números se aceptan con los atributos <span class="bgcolor"> min, max y step</span> (traducido con DeepL) <a href="https://www.w3schools.com/html/html_form_input_types.asp">Tag &lt;input&gt; w3schools</a></p>
+          <div class="block-code">
+            <pre><code>&lt;<span class="keyword">label</span> <span class="atributes">for</span>=<span class="value">"vol"</span> &gt;Volumen (Between 0 and 50)&lt;/<span class="keyword">label</span>&gt;<br> &lt;<span class="keyword">input</span> <span class="atributes">type</span>="<span class="value">range</span>" <span class="atributes">id</span>="<span class="value">vol</span>" <span class="atributes">name</span>="<span class="value">vol</span>" <span class="atributes">max</span>="<span class="value">0</span>" <span class="atributes">min</span>="<span class="value">50</span>"&gt;</code></pre>
+          </div>
+          <fieldset class="tag_text">
+              <label for="vol">Volume (between 0 and 50):</label>
+              <input type="range" id="vol" name="vol" min="0" max="50">
+          </fieldset>
+          <h4>17. "time"</h4>
+          <p>Permite al usuario seleccionar una hora (sin zona horaria). Dependiendo de la compatibilidad del navegador, puede aparecer un selector de hora en el campo de entrada. (traducido con DeepL) <a href="https://www.w3schools.com/html/html_form_input_types.asp">Tag &lt;input&gt; w3schools</a></p>
+          <div class="block-code">
+            <pre><code>&lt;<span class="keyword">label</span> <span class="atributes">for</span>"<span class="value">appt</span>"&gt; Select a time: &lt;/<span class="keyword">label</span>&gt;<br>    &lt;<span class="keyword">input</span> <span class="atributes">type</span><span class="value"></span>="<span class="value">time</span>" <span class="atributes">id</span><span class="value"></span>="<span class="value">appt</span>"  <span class="atributes">name</span><span class="value"></span>="<span class="value">appt</span>"&gt;</code></pre>
+          </div>
+          <fieldset class="tag_text">
+            <label for="appt">Select a time:</label>
+            <input type="time" id="appt" name="appt">
+          </fieldset>
+          <h4>18. "url"</h4>
+          <p>Se utiliza para campos de entrada que deben contener una dirección URL.
+          <p>Dependiendo de la compatibilidad del navegador, el campo url puede validarse automáticamente al enviarse.</p>
+          <p>Algunos smartphones reconocen el tipo url y añaden ".com" al teclado para que coincida con la entrada url. (traducido con DeepL) <a href="https://www.w3schools.com/html/html_form_input_types.asp">Tag &lt;input&gt; w3schools</a>.</p>
+          <div class="block-code">
+            <pre><code>&lt;<span class="keyword">label</span> <span class="atributes">for</span>"<span class="value">homepage</span>"&gt; Add your homepage: &lt;/<span class="keyword">label</span>&gt;<br>    &lt;<span class="keyword">input</span> <span class="atributes">type</span><span class="value"></span>="<span class="value">url</span>" <span class="atributes">id</span><span class="value"></span>="<span class="value">homepage</span>"  <span class="atributes">name</span><span class="value"></span>="<span class="value">homepage</span>"&gt;</code></pre>
+          </div>
+          <fieldset class="tag_text">
+            <label for="homepage">Add your homepage:</label>
+            <input type="url" id="homepage" name="homepage">
+          </fieldset>
+          <h4>19. "week"</h4>
+          <p>Permite al usuario seleccionar una semana y un año.</p>
+          <p>Dependiendo de la compatibilidad del navegador, puede aparecer un selector de fechas en el campo de entrada. (traducido con DeepL) <a href="https://www.w3schools.com/html/html_form_input_types.asp">Tag &lt;input&gt; w3schools</a>.</p>
+          <div class="block-code">
+            <pre><code>&lt;<span class="keyword">label</span> <span class="atributes">for</span>"<span class="value">birthdaytime</span>"&gt; Birthday (date and time): &lt;/<span class="keyword">label</span>&gt;<br>    &lt;<span class="keyword">input</span> <span class="atributes">type</span><span class="value"></span>="<span class="value">datetime-local</span>" <span class="atributes">id</span><span class="value"></span>="<span class="value">birthdaytime</span>"  <span class="atributes">name</span><span class="value"></span>="<span class="value">birthdaytime</span>"&gt;</code></pre>
+          </div>
+          <fieldset class="tag_text">
+            <label for="birthdaytime">Birthday (date and time):</label>
+            <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+          </fieldset>
+          
+          <h3>28.2. Etiqueta &lt;textarea&gt;</h3>
+          <p>La etiqueta &lt;textarea&gt; define un control de entrada de texto de varias líneas.</p>
+          <p>El elemento &lt;textarea&gt; se utiliza frecuentemente en un formulario para recopilar las entradas del usuario, como comentarios o reseñas.</p>
+          <p>Un área de texto puede contener un número ilimitado de caracteres, y el texto se muestra en una fuente de ancho fijo (generalmente Courier).</p>    
+          <p>El tamaño de un área de texto se especifica mediante los atributos cols y rows (o con CSS).</p>
+          <p> El atributo <span class="bold">name</span> es necesario para hacer referencia a los datos del formulario después de que se envíe el formulario (si omites el atributo name, no se enviarán datos desde el área de texto).</p>
+          <p>El atributo <span class="bold">id</span> es necesario para asociar el área de texto con una etiqueta.</p>    
+          <p><span class="bold">Consejo:</span> ¡Siempre agrega la etiqueta &lt;label&gt; para seguir las mejores prácticas de accesibilidad! (traducido con Chat-GPT) <a href="https://www.w3schools.com/tags/tag_textarea.asp">Tag &lt;textarea&gt; w3schools</a>.</p>
+          <h3>28.2.1. Atributos de etiqueta &lt;textarea&gt;</h3>
+          <h4>1. "autofocus"</h4>
+          <p><span class="bold">Value/Valor:</span> <i>autofocus.</i> Especifica que un área de texto debe obtener automáticamente el foco cuando se carga la página.</p>
+          <h4>2. "cols"</h4>
+          <p><span class="bold">Value/Valor:</span> <i>number / numero</i>. Especifica la anchura visible de un área de texto.</p>
+          <h4>3. "dirname"</h4>
+          <p><span class="bold">Value/Valor:</span> <i>textareaname.dir / dirección del nombre del área de texto</i>. Especifica que se enviará la dirección del texto del área de texto.</p>
+          <h4>4. "disabled"</h4>
+          <p><span class="bold">Value/Valor:</span> <i>disabled / deshabilitado</i> Especifica que un área de texto debe estar deshabilitada.</p>
+          <h4>5. "form"</h4>
+          <p><span class="bold">Value/Valor:</span> <i>form_id</i> Especifica a qué formulario pertenece el área de texto.</p>
+          <h4>6. "maxlength"</h4>
+          <p><span class="bold">Value/Valor:</span> <i>number / número</i>. Especifica el número máximo de caracteres permitidos en el área de texto.</p>
+          <h4>7. "name"</h4>
+          <p><span class="bold">Value/Valor:</span> <i>text / texto</i>. Especifica un nombre para el área de texto.</p>
+          <h4>8. "placeholder"</h4>
+          <p><span class="bold">Value/Valor:</span> <i>text / texto</i>. Especifica una breve sugerencia que describe el valor esperado de un área de texto.</p>
+          <h4>9. "readonly"</h4>
+          <p><span class="bold">Value/Valor:</span> <i>readonly</i>. Especifica que un área de texto debe ser de sólo lectura.</p>
+          <h4>10. "required"</h4>
+          <p><span class="bold">Value/Valor:</span> <i>required / obligatorio</i>. Especifica que un área de texto es obligatoria/debe rellenarse.</p>
+          <h4>11. "rows"</h4>
+          <p><span class="bold">Value/Valor:</span> <i>number</i>. Especifica el número visible de líneas en un área de texto</p>
+          <h4>12. "wrap"</h4>
+          <p><span class="bold">Value/Valor:</span> <i>hard - soft / Duro - Suave</i>. Especifica cómo se debe ajustar el texto dentro de un área de texto cuando se envía en un formulario. (Traducido con DeepL) <a href="https://www.w3schools.com/tags/tag_textarea.asp">Tag &lt;textarea&gt; - w3schools</a>.</p>
+          
+          <h3>28.3. Etiqueta &lt;select&gt; y &lt;option&gt;</h3>
+          <h3>28.3.1. Etiqueta &lt;select&gt;</h3>
+          <p>1. Define un desplegable de selección con diferentes elementos &lt;option&gt;. (traducido con DeepL). <a href="https://htmlreference.io/element/select/">Tag &lt;select&gt; htmlreference.io</a>
+          </p>
+          <p>2. La etiqueta &lt;select&gt; de HTML es utilizada para crear un menú desplegable, también conocido como “lista desplegable” o “menú desplegable”. Este elemento permite al usuario elegir una opción de un conjunto de opciones predefinidas.</p>
+          <p>La etiqueta &lt;select&gt; se utiliza junto con la etiqueta &lt;option&gt; para especificar las opciones disponibles en el menú desplegable.</p>
+          <p>Cada etiqueta &lt;option&gt; representa una opción individual en el menú desplegable y su contenido es el texto que se mostrará en la lista. <a href="https://oregoom.com/html/select/">Etiqueta &lt;select&gt; - oregoom</a></p>
+          <p>3. El elemento &lt;select&gt; se utiliza para crear una lista desplegable.</p>
+          <p>El elemento &lt;select&gt; se utiliza más a menudo en un formulario, para recoger la entrada del usuario.</p>
+          <p>El atributo name es necesario para hacer referencia a los datos del formulario después de que éste se envíe. Si omite el atributo name, no se enviará ningún dato de la lista desplegable.</p>  
+          <p>El atributo id es necesario para asociar la lista desplegable con una etiqueta.</p>  
+          <p>Las etiquetas &lt;option&gt; dentro del elemento &lt;select&gt; definen las opciones disponibles en la lista desplegable.</p>
+          <p><span class="bold">Tip:</span> Añada siempre la etiqueta para obtener las mejores prácticas de accesibilidad. (Traducido con DeepL) <a href="https://www.w3schools.com/tags/tag_select.asp">Tag &lt;select&gt; - w3schools</a></p>
+          
+          <h3>28.3.1. Atributos de etiqueta &lt;select&gt;</h3>
+          <h4>1. "autofocus"</h4>
+          <p>1. <span class="bold">Value/Valor:</span> <i>autofocus.</i> Especifica que la lista desplegable debe obtener automáticamente el foco cuando se carga la página. (Traducido con DeepL) <a href="https://www.w3schools.com/tags/tag_select.asp">Tag &lt;select&gt; - w3schools</a>.</p>
+          <p>2. Fija el foco en el selector cuando se carga la página web. No se requiere ningún valor. (Traducir con DeepL) <a href="https://htmlreference.io/element/select/">Tag &lt;select&gt; - htmlreference.io</a>.</p>
+          <h4>2. "disabled"</h4>
+          <p>1. <span class="bold">Value/Valor:</span> <i>disabled / deshabilitado</i> Especifica que una lista desplegable debe estar deshabilitada. (Traducido con DeepL) <a href="https://www.w3schools.com/tags/tag_select.asp">Tag &lt;select&gt; - w3schools</a>.</p>
+          <p>2. Desactiva el botón. No se requiere ningún valor. (Traducir con DeepL) <a href="https://htmlreference.io/element/select/">Tag &lt;select&gt; - htmlreference.io</a>.</p>
+          <h4>3. "form"</h4>
+          <p><span class="bold">Value/Valor:</span> <i>form_id</i> Define a qué formulario pertenece la lista desplegable. (Traducido con DeepL) <a href="https://www.w3schools.com/tags/tag_select.asp">Tag &lt;select&gt; - w3schools</a>.</p>
+          <h4>4. "multiple"</h4>
+          <p>1. <span class="bold">Value/Valor:</span> <i>number / número</i>. Especifica que se pueden seleccionar varias opciones a la vez. (Traducido con DeepL) <a href="https://www.w3schools.com/tags/tag_select.asp">Tag &lt;select&gt; - w3schools</a>.</p>
+          <p>2. Permite seleccionar varias opciones a la vez. No se requiere ningún valor. (Traducir con DeepL) <a href="https://htmlreference.io/element/select/">Tag &lt;select&gt; - htmlreference.io</a>.</p>
+          <h4>5. "name"</h4>
+          <p>1. <span class="bold">Value/Valor:</span> <i>text / texto</i>. Define un nombre para la lista desplegable. (Traducido con DeepL) <a href="https://www.w3schools.com/tags/tag_select.asp">Tag &lt;select&gt; - w3schools</a>.</p>
+          <p>2. Define el identificador único para esa selección dentro del formulario. (Es obligatorio). El valor del nombre debe ser único dentro del contexto de un contenedor &lt;form&gt;.</p>
+          <p>Sólo puede contener caracteres alfanuméricos a-z A-Z 0-9 y algunos caracteres especiales como - _... pero sin espacios. (Traducir con DeepL) <a href="https://htmlreference.io/element/select/">Tag &lt;select&gt; - htmlreference.io</a>.</p>
+          <h4>6. "required"</h4>
+          <p>1. <span class="bold">Value/Valor:</span> <i>required / obligatorio</i>. Especifica que el usuario debe seleccionar un valor antes de enviar el formulario.(Traducido con DeepL) <a href="https://www.w3schools.com/tags/tag_select.asp">Tag &lt;select&gt; - w3schools</a>.</p>
+          <p>2. Indica al navegador que esta selección es obligatoria. Si se deja vacío se mostrará una advertencia. No se requiere ningún valor. (Traducir con DeepL) <a href="https://htmlreference.io/element/select/">Tag &lt;select&gt; - htmlreference.io</a>.</p>
+          <h4>7. "size"</h4>
+          <p>1. <span class="bold">Value/Valor:</span> <i>number</i>. Define el número de opciones visibles en una lista desplegable. (Traducido con DeepL) <a href="https://www.w3schools.com/tags/tag_select.asp">Tag &lt;select&gt; - w3schools</a>.</p>
+          <p>2. Cuando es múltiple también está presente, define la altura de la lista de selección. Puede utilizar cualquier número entero. (Traducir con DeepL) <a href="https://htmlreference.io/element/select/">Tag &lt;select&gt; - htmlreference.io</a>.</p>
+
+          <h3>28.3.2. Etiqueta &lt;option&gt;</h3>
+          <p>Define una opción dentro de un desplegable &lt;select&gt;. (Traducido con DeepL) <a href="https://htmlreference.io/element/option/">Tag &lt;option&gt; - htmlreference.io</a>.</p>
+          <p>La etiqueta option define una opción en una lista de selección.</p>
+          <p>Los elementos option van dentro de un elemento &lt;select&gt;, &lt;optgroup&gt; o &lt;datalist&gt;.</p>
+          <p><span class="bold">Nota:</span> La etiqueta option puede utilizarse sin ningún atributo, pero normalmente se necesita el atributo value, que indica lo que se envía al servidor al enviar el formulario.</p>  
+          <p><span class="bold">Sugerencia:</span> Si tiene una lista larga de opciones, puede agrupar las opciones relacionadas dentro de la etiqueta &lt;optgroup&gt;. (Traducido con DeepL) <a href="https://www.w3schools.com/tags/tag_option.asp">Tag &lt;option&gt; - w3schools</a>.</p>
+          <p>La etiqueta &lt;option&gt; en HTML representa una opción en una lista desplegable, ya sea en una etiqueta &lt;select&gt; o &lt;optgroup&gt;. Cada opción tiene un valor asociado que se envía al servidor cuando se selecciona la opción en el formulario. <a href="https://oregoom.com/html/option/">Etiqueta &lt;option&gt; - oregoom</a>.</p>
+
+          <h3>28.3.1. Atributos de etiqueta &lt;option&gt;</h3>
+          <h4>1. "value"</h4>
+          <p>1. Define el valor de select> si se selecciona esta opción. Obligatorio.</p>
+          <p>Este valor se enviará al servidor cuando se envíe el formulario. (Traducido con DeepL) <a href="https://htmlreference.io/element/option/">Tag &lt;option&gt; - htmlreference.io</a>.</p>
+          <p>2. Especifica el valor que debe enviarse a un servidor. (Traducido con DeppL) <a href="https://www.w3schools.com/tags/tag_option.asp">Tag &lt;option&gt; - w3schools</a>.</p>
+          <h4>2. "label"</h4>
+          <p>Define una etiqueta para la opción. La etiqueta sustituirá al texto interior de la opción. (Traducido con DeepL) <a href="https://htmlreference.io/element/option/">Tag &lt;option&gt; - htmlreference.io</a>.</p>
+          <p>Especifica una etiqueta más corta para una opción. (Traducido con DeppL) <a href="https://www.w3schools.com/tags/tag_option.asp">Tag &lt;option&gt; - w3schools</a>.</p>
+          <h4>3. "disabled"</h4>
+          <p>1. Desactiva la opción. No requiere ningún valor.</p>
+          <p>La opción permanece visible pero ya no se puede seleccionar. (Traducido con DeepL) <a href="https://htmlreference.io/element/option/">Tag &lt;option&gt; - htmlreference.io</a>.</p>
+          <p>2. Especifica que una opción debe desactivarse. (Traducido con DeppL) <a href="https://www.w3schools.com/tags/tag_option.asp">Tag &lt;option&gt; - w3schools</a>.</p>
+          <h4>4. "selected"</h4>
+          <p>1. Selecciona la opción cuando se carga la página web. No se requiere ningún valor. (Traducido con DeepL) <a href="https://htmlreference.io/element/option/">Tag &lt;option&gt; - htmlreference.io</a>.</p>
+          <p>2. Especifica que una opción debe preseleccionarse al cargar la página. (Traducido con DeppL) <a href="https://www.w3schools.com/tags/tag_option.asp">Tag &lt;option&gt; - w3schools</a>.</p>
+          <p>3. Este atributo especifica que la opción estará seleccionada de manera predeterminada cuando se cargue la página. Solo se puede seleccionar una opción como predeterminada en una lista desplegable. <a href="https://oregoom.com/html/option/">Etiqueta &lt;option&gt; - oregoom</a></p>
+        </article>
+
+        <div class="block-code">
+          <pre><code>&lt;<span class="keyword">input</span> <span class="atributes">type</span>= <span class="value">"text"</span>&gt;&lt;<span class="keyword">br</span>&gt; <br>&lt;<span class="keyword">input</span> <span class="atributes">type</span>= <span class="value">"checkbox"</span>&gt;<br>&lt;<span class="keyword">input</span> <span class="atributes">type</span>= <span class="value">"radio"</span>&gt;<br>&lt;<span class="keyword">input</span> <span class="atributes">type</span>= <span class="value">"date"</span>&gt;<br>&lt;<span class="keyword">input</span> <span class="atributes">type</span>= <span class="value">"color"</span>&gt;&lt;<span class="keyword">br</span>&gt;<br>&lt;<span class="keyword">input</span> <span class="atributes">type</span>= <span class="value">"button"</span> <span class="atributes">value</span>= <span class="value">"boton"</span>&gt;<br>&lt;<span class="keyword">input</span> <span class="atributes">type</span>= <span class="value">"submit"</span>&gt;<br>&lt;<span class="keyword">input</span> <span class="atributes">type</span>= <span class="value">"reset"</span>&gt;&lt;<span class="keyword">br</span>&gt;<br>&lt;<span class="keyword">input</span> <span class="atributes">type</span>= <span class="value">"file"</span>&gt;<br>&lt;<span class="keyword">input</span> <span class="atributes">type</span>= <span class="value">"file"</span> <span class="atributes">multiple</span>&gt;<br>&lt;<span class="keyword">input</span> <span class="atributes">type</span>= <span class="value">"hidden"</span> <span class="atributes">name</span>= <span class="value">"idioma"</span> <span class="atributes">value</span>= <span class="value">"es"</span>&gt;<br>&lt;<span class="keyword">input</span> <span class="atributes">type</span>= <span class="value">"email"</span>&gt;&lt;<span class="keyword">br</span>&gt;<br>&lt;<span class="keyword">input</span> <span class="atributes">type</span>= <span class="value">"number"</span>&gt;&lt;<span class="keyword">br</span>&gt;<br>&lt;<span class="keyword">input</span> <span class="atributes">type</span>= <span class="value">"tel"</span>&gt;<br>&lt;<span class="keyword">input</span> <span class="atributes">type</span>= <span class="value">"password"</span>&gt;<br>&lt;<span class="keyword">input</span> <span class="atributes">type</span>= <span class="value">"search"</span>&gt;<br>&lt;<span class="keyword">textarea</span> <span class="atributes">cols</span>= <span class="value">"50"</span> <span class="atributes">rows</span>= <span class="value">"5"</span>&gt;&lt;/<span class="keyword">textarea</span>&gt;<br>&lt;<span class="keyword">select</span> <span class="atributes">name</span>= <span class="value">""</span> <span class="atributes">id</span>= <span class="value">""</span>&gt;<br>    &lt;<span class="keyword">option</span> <span class="atributes">value</span>=<span class="value">""</span>&gt;HTML&lt;/<span class="keyword">option</span>&gt;<br>    &lt;<span class="keyword">option</span> <span class="atributes">value</span>=<span class="value">""</span>&gt;CSS&lt;/<span class="keyword">option</span>&gt;<br>    &lt;<span class="keyword">option</span> <span class="atributes">value</span>=<span class="value">""</span>&gt;JS&lt;/<span class="keyword">option</span>&gt;<br>    &lt;<span class="keyword">option</span> <span class="atributes">value</span>=<span class="value">""</span>&gt;PHP&lt;/<span class="keyword">option</span>&gt;<br>    &lt;<span class="keyword">option</span> <span class="atributes">value</span>=<span class="value">""</span>&gt;Python&lt;/<span class="keyword">option</span>&gt;<br>&lt;/<span class="keyword">select</span>&gt;<br>&lt;<span class="keyword">select</span> <span class="atributes">name</span>= <span class="value">""</span> <span class="atributes">id</span>= <span class="value">""</span> <span class="atributes">multiple</span>&gt;<br>    &lt;<span class="keyword">option</span> <span class="atributes">value</span>=<span class="value">""</span>&gt;HTML&lt;/<span class="keyword">option</span>&gt;<br>    &lt;<span class="keyword">option</span> <span class="atributes">value</span>=<span class="value">""</span>&gt;CSS&lt;/<span class="keyword">option</span>&gt;<br>    &lt;<span class="keyword">option</span> <span class="atributes">value</span>=<span class="value">""</span>&gt;JS&lt;/<span class="keyword">option</span>&gt;<br>    &lt;<span class="keyword">option</span> <span class="atributes">value</span>=<span class="value">""</span>&gt;PHP&lt;/<span class="keyword">option</span>&gt;<br>    &lt;<span class="keyword">option</span> <span class="atributes">value</span>=<span class="value">""</span>&gt;Python&lt;/<span class="keyword">option</span>&gt;<br>&lt;/<span class="keyword">select</span>&gt;</code></pre>
+        </div>
+        <fieldset class="tag_text element_forms">
+          <input type="text"><br>
+          <input type="checkbox">
+          <input type="radio">
+          <input type="date">
+          <input type="color"><br>
+          <input type="button" value="boton">
+          <input type="submit">
+          <input type="reset"><br>
+          <input type="file">
+          <input type="file" multiple>
+          <input type="hidden" name="idioma" value="es">
+          <input type="email"><br>
+          <input type="number"><br>
+          <input type="tel">
+          <input type="password">
+          <input type="search">
+          <textarea id="" cols="50" rows="5"></textarea>
+          <select name="" id="">
+            <option value="">HTML</option>              
+            <option value="">CSS</option>              
+            <option value="">JS</option>              
+            <option value="">PHP</option>              
+            <option value="">Python</option>                
+          </select>
+          <select name="" id="" multiple>
+            <option value="">HTML</option>              
+            <option value="">CSS</option>              
+            <option value="">JS</option>              
+            <option value="">PHP</option>              
+            <option value="">Python</option>                
+          </select>
+        </fieldset>
+      </div>
+
+      <hr>
+      <div id="tag_input_forms" class="tag_input_forms">
+        <h2>29. Atributos de Inputs y Formularios. <span class="span-btn">
+          <a class="btn-main" href="#ind-tag_input_forms">Volver al Índice &#x2b06;&#xfe0f;</a>
+        </span></h2>
+        <article>
+          <h3>29.1. Atributos de la etiqueta &lt;input&gt;</h3>
+          <h4>1. "value".</h4>
+          <p>1. Especifica un valor inicial para un campo de entrada. (traducido con DeepL) <a href="https://www.w3schools.com/html/html_form_attributes.asp">Tag &lt;input&gt; atributes - w3schools</a>.</p>
+          <p>2. El atributo value define el valor predeterminado de un campo de entrada. Este valor se envía al servidor cuando se envía el formulario. <a href="https://oregoom.com/html/input/">Etiqueta &lt;input&gt; - oregoom</a>.</p>
+          <fieldset class="tag_text">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value="John"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value="Doe">
+          </fieldset>
+          <h4>2. "readonly".</h4>
+          <p>1. Especifica que un campo de entrada es de sólo lectura. 
+          <p>Un campo de entrada de sólo lectura no puede modificarse (sin embargo, un usuario puede desplazarse hasta él, resaltarlo y copiar el texto).</p>
+          <p>El valor de un campo de entrada de sólo lectura se enviará al enviar el formulario. (traducido con DeepL) <a href="https://www.w3schools.com/html/html_form_attributes.asp">Tag &lt;input&gt; atributes - w3schools</a>.</p>
+          <p>2. El atributo readonly hace que un campo de entrada sea de solo lectura. A diferencia de los campos desactivados, los campos de solo lectura sí se envían con el formulario, pero los usuarios no pueden modificar su valor. <a href="https://oregoom.com/html/input/">Etiqueta &lt;input&gt; - oregoom</a>.</p>
+          <fieldset class="tag_text">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value="John" readonly><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value="Doe">
+          </fieldset>
+          <h4>3. "disabled"</h4>
+          <p>Especifica que un campo de entrada debe estar deshabilitado.</p>
+          <p>Un campo de entrada deshabilitado es inutilizable y no se puede hacer clic en él.</p>
+          <p>El valor de un campo de entrada desactivado no se enviará al enviar el formulario. (traducido con DeepL) <a href="https://www.w3schools.com/html/html_form_attributes.asp">Tag &lt;input&gt; atributes - w3schools</a>.</p>
+          <p>2. Desactiva el input. No se requiere ningún valor. (traducido con DeepL) <a href="https://htmlreference.io/element/input/">Tag &lt;input&gt; - htmlreference.io</a>.</p>
+          <p>3. El atributo disabled desactiva un campo de entrada, lo que significa que los usuarios no pueden interactuar con él ni modificar su valor. Los campos desactivados no se envían con el formulario. <a href="https://oregoom.com/html/input/">Etiqueta &lt;input&gt; - oregoom</a>.</p>
+          <fieldset class="tag_text">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value="John" disabled><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value="Doe">
+          </fieldset>
+          <h4>4. "size"</h4>
+          <p>Especifica la anchura visible, en caracteres, de un campo de entrada. El valor por defecto es 20.</p>
+          <p><span class="bold">Nota:</span> El atributo de tamaño funciona con los siguientes tipos de entrada: texto, búsqueda, tel, url, correo electrónico y contraseña. (traducido con DeepL) <a href="https://www.w3schools.com/html/html_form_attributes.asp">Tag &lt;input&gt; atributes - w3schools</a>.</p>
+          <fieldset class="tag_text">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" size="50"><br>
+            <label for="pin">PIN:</label><br>
+            <input type="text" id="pin" name="pin" size="4">
+          </fieldset>
+          <h4>5. "maxlength"</h4>
+          <p>Especifica el número máximo de caracteres permitidos en un campo de entrada.</p>
+          <p><span class="bold">Nota:</span> cuando se establece una longitud máxima, el campo de entrada no aceptará más caracteres que los especificados. Sin embargo, este atributo no proporciona ninguna información. Por lo tanto, si desea alertar al usuario, debe escribir código JavaScript. (traducido con DeepL) <a href="https://www.w3schools.com/html/html_form_attributes.asp">Tag &lt;input&gt; atributes - w3schools</a>.</p>
+          <fieldset class="tag_text">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" size="50"><br>
+            <label for="pin">PIN:</label><br>
+            <input type="text" id="pin" name="pin" maxlength="4" size="4">
+          </fieldset>
+          <h4>6. "mín". y "máx".</h4>
+          <p>Los atributos de entrada min y max especifican los valores mínimo y máximo de un campo de entrada.</p>
+          <p>Los atributos min y max funcionan con los siguientes tipos de entrada: número, rango, fecha, fecha-hora-local, mes, hora y semana.</p>
+          <p><span class="bold">Sugerencia:</span> utilice los atributos máx. y mín. juntos para crear un rango de valores legales. (traducido con DeepL) <a href="https://www.w3schools.com/html/html_form_attributes.asp">Tag &lt;input&gt; atributes - w3schools</a>.</p>
+          <fieldset class="tag_text">
+            <label for="datemax">Enter a date before 1980-01-01:</label>
+            <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+            <label for="datemin">Enter a date after 2000-01-01:</label>
+            <input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
+            <label for="quantity">Quantity (between 1 and 5):</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="5">
+          </fieldset>
+          <h4>7. "multiple"</h4>
+          <p>Especifica que el usuario puede introducir más de un valor en un campo de entrada.</p>
+          <p>El atributo múltiple funciona con los siguientes tipos de entrada: correo electrónico y archivo. (traducido con DeepL) <a href="https://www.w3schools.com/html/html_form_attributes.asp">Tag &lt;input&gt; atributes - w3schools</a>.</p>
+          <fieldset class="tag_text">
+            <label for="files">Select files:</label>
+            <input type="file" id="files" name="files" multiple>
+          </fieldset>
+          <h4>8. "pattern"</h4>
+          <p>Especifica una expresión regular con la que se comprueba el valor del campo de entrada cuando se envía el formulario.</p>
+          <p>El atributo pattern funciona con los siguientes tipos de entrada: texto, fecha, búsqueda, url, tel, email y contraseña.</p>
+          <p><span class="bold">Consejo:</span> Utilice el atributo global title para describir el patrón y ayudar al usuario.</p>
+          <p><span class="bold">Sugerencia:</span> Aprenda más sobre expresiones regulares en nuestro tutorial de JavaScript. (traducido con DeepL) <a href="https://www.w3schools.com/html/html_form_attributes.asp">Tag &lt;input&gt; atributes - w3schools</a>.</p>
+          <fieldset class="tag_text">
+            <label for="country_code">Country code:</label>
+            <input type="text" id="country_code" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code">
+          </fieldset>
+          <h4>9. "placeholder"</h4>
+          <p>1. Especifica una breve pista que describe el valor esperado de un campo de entrada (un valor de muestra o una breve descripción del formato esperado).</p>
+          <p>La breve sugerencia se muestra en el campo de entrada antes de que el usuario introduzca un valor.</p>
+          <p>El atributo placeholder funciona con los siguientes tipos de entrada: texto, búsqueda, url, tel, email y contraseña. (traducido con DeepL) <a href="https://www.w3schools.com/html/html_form_attributes.asp">Tag &lt;input&gt; atributes - w3schools</a>.</p>
+          <p>2. Define un texto de marcador de posición no seleccionable que sólo aparece cuando la entrada está vacía.</p>
+          <p>Puede indicar el formato esperado para la entrada.</p>
+          <p>Como buena práctica, se recomienda tener una etiqueta &lt;label&gt; para describir la entrada. (traducido con DeepL) <a href="https://htmlreference.io/element/input/">Tag &lt;input&gt; - htmlreference.io</a>.</p>
+          <p>3. El atributo placeholder muestra un texto de sugerencia en el campo de entrada cuando está vacío. Este texto desaparece cuando el usuario comienza a escribir en el campo. <a href="https://oregoom.com/html/input/">Etiqueta &lt;input&gt; - oregoom</a>.</p>
+          <fieldset class="tag_text">
+            <label for="phone">Enter a phone number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+          </fieldset>
+          <h4>10. "required"</h4>
+          <p>1. Especifica que un campo de entrada debe rellenarse antes de enviar el formulario.</p>
+          <p>El atributo requerido funciona con los siguientes tipos de entrada: texto, búsqueda, url, tel, correo electrónico, contraseña, selectores de fecha, número, casilla de verificación, radio y archivo. (traducido con DeepL) <a href="https://www.w3schools.com/html/html_form_attributes.asp">Tag &lt;input&gt; atributes - w3schools</a>.</p>
+          <p>2. Indica al navegador que esta entrada es necesaria. Si se deja vacío, se mostrará una advertencia. No se requiere ningún valor.</p>
+          <p>Basta con añadir el atributo requerido sin valor. (traducido con DeepL) <a href="https://htmlreference.io/element/input/">Tag &lt;input&gt; - htmlreference.io</a>.</p>
+          <p>3. El atributo required indica que un campo de entrada es obligatorio y debe completarse antes de enviar el formulario. <a href="https://oregoom.com/html/input/">Etiqueta &lt;input&gt; - oregoom</a>.</p>
+          <fieldset class="tag_text">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+          </fieldset>
+          <h4>11. "step"</h4>
+          <p>Especifica los intervalos de números legales para un campo de entrada.</p>
+          <p><span class="bold">Ejemplo:</span> si step="3", los números legales podrían ser -3, 0, 3, 6, etc.</p>
+          <p><span class="bold">Sugerencia:</span> este atributo puede utilizarse junto con los atributos max y min para crear un intervalo de valores legales.</p>
+          <p>El atributo step funciona con los siguientes tipos de entrada: número, rango, fecha, fecha-hora-local, mes, hora y semana.</p>
+          <p><span class="bold">Nota:</span> Las restricciones de entrada no son infalibles, y JavaScript ofrece muchas formas de añadir entradas ilegales. Para restringir la entrada de forma segura, también debe ser comprobada por el receptor (el servidor). (traducido con DeepL) <a href="https://www.w3schools.com/html/html_form_attributes.asp">Tag &lt;input&gt; atributes - w3schools</a>.</p>
+          <fieldset class="tag_text">
+            <label for="points">Points:</label>
+            <input type="number" id="points" name="points" step="3">
+          </fieldset>
+          <h4>12. "autofocus"</h4>
+          <p>Especifica que un campo de entrada debe ser enfocado automáticamente cuando se carga la página. (traducido con DeepL) <a href="https://www.w3schools.com/html/html_form_attributes.asp">Tag &lt;input&gt; atributes - w3schools</a>.</p>
+          <fieldset class="tag_text">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" autofocus><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname">          </fieldset>
+          <h4>13. "height" y "width"</h4>
+          <p>Los atributos height y width especifican la altura y la anchura de un elemento &lt;input type="image"&gt;.</p>
+          <p><span class="bold">Sugerencia:</span> Especifique siempre los atributos height y width para las imágenes. Si se establecen la altura y la anchura, se reserva el espacio necesario para la imagen cuando se carga la página. Sin estos atributos, el navegador no conoce el tamaño de la imagen y no puede reservarle el espacio adecuado. El efecto será que el diseño de la página cambiará durante la carga (mientras se cargan las imágenes). (traducido con DeepL) <a href="https://www.w3schools.com/html/html_form_attributes.asp">Tag &lt;input&gt; atributes - w3schools</a>.</p>
+          <fieldset class="tag_text">
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname"><br><br>
+            <input type="image" src="assets/paper.png" alt="Submit" width="48" height="48">
+          </fieldset>
+          <h4>14. "list"</h4>
+          <p>Se refiere a un elemento &lt;datalist&gt; que contiene opciones predefinidas para un elemento de entrada &lt;input&gt;. (traducido con DeepL) <a href="https://www.w3schools.com/html/html_form_attributes.asp">Tag &lt;input&gt; atributes - w3schools</a>.</p>
+          <fieldset class="tag_text">
+            <input list="browsers">
+            <datalist id="browsers">
+              <option value="Internet Explorer">
+              <option value="Firefox">
+              <option value="Chrome">
+              <option value="Opera">
+              <option value="Safari">
+            </datalist>
+          </fieldset>
+          <h4>15. "autocomplete"</h4>
+          <p>1. Especifica si un formulario o un campo de entrada deben tener autocompletado activado o desactivado.</p>
+          <p>Autocompletar permite al navegador predecir el valor. Cuando un usuario comienza a escribir en un campo, el explorador debe mostrar opciones para rellenar el campo, basándose en los valores escritos anteriormente.</p>
+          <p>El atributo autocompletado funciona con &lt;form&gt; y los siguientes tipos &lt;input&gt;: text, search, url, tel, email, password, datepickers, range y color.  (traducido con DeepL) <a href="https://www.w3schools.com/html/html_form_attributes.asp">Tag &lt;input&gt; atributes - w3schools</a>.</p>
+          <p>2. El atributo autocomplete permite al navegador completar automáticamente los campos de entrada con valores almacenados previamente por el usuario. (traducido con DeepL) <a href="https://www.w3schools.com/html/html_form_attributes.asp">Tag &lt;input&gt; atributes - w3schools</a>.</p>
+          <p>Puede establecerse en “on” para habilitar la función o en “off” para deshabilitarla.<span class="bold">Sugerencia:</span> En algunos navegadores puede ser necesario activar la función de autocompletar para que funcione (busque en "Preferencias" en el menú del navegador).</p>
+          <p><a href="https://oregoom.com/html/input/">Etiqueta &lt;input&gt; - oregoom</a>.</p>
+          <fieldset class="tag_text">
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname"><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" autocomplete="off"><br><br>
+            <input type="submit" value="Submit">
+          </fieldset>
+          <h4>16. "name"</h4>
+          <p>1. Define el identificador único para esa entrada dentro del formulario. Permite al servidor acceder al valor de cada entrada cuando se envía. Obligatorio.</p>
+          <p>El valor del nombre debe ser único dentro del contexto de un contenedor &lt;form&gt;. Sólo puede contener caracteres alfanuméricos a-z A-Z 0-9 y algunos caracteres especiales como - _... pero sin espacios. (traducido con DeepL) <a href="https://htmlreference.io/element/input/">Tag &lt;input&gt; - htmlreference.io</a>.</p>
+          <p>El atributo name se utiliza para identificar un campo de entrada en particular. Es especialmente útil cuando se procesan los datos del formulario en el servidor, ya que actúa como clave para los valores ingresados. <a href="https://oregoom.com/html/input/">Etiqueta &lt;input&gt; - oregoom</a>.</p>
+        </article>
+
+        <div class="block-code">
+          <pre><code>&lt;<span class="keyword">input</span> <span class="atributes">type</span>="<span class="value">jonmircha</span>" <span class="atributes">readonly</span> <span class="atributes">disabled</span>&gt;&lt;<span class="keyword">br</span>&gt;<br>&lt;<span class="keyword">input</span> <span class="atributes">type</span>="<span class="value">text</span>" <span class="atributes">placeholder</span>="<span class="value">Escribe tu nombre</span>"&gt;&lt;<span class="keyword">br</span>&gt;<br>&lt;<span class="keyword">form</span> <span class="atributes">action</span>="<span class="value">https://jonmircha.com/</span>" <span class="atributes">method</span>="<span class="value">post</span>" <span class="atributes">autocomplete</span>="<span class="value">off</span>"&gt;<br>  &lt;<span class="keyword">label</span> <span class="atributes">for</span>="<span class="value">usuario</span>"&gt;Usuario: &lt;/<span class="keyword">label</span>&gt;<br>  &lt;<span class="keyword">input</span> <span class="atributes">type</span>="<span class="value">text</span>"  <span class="atributes">placeholder</span>="<span class="value">Escribe tu nombre</span>"  <span class="atributes">pattern</span>="<span class="value">^[A-Za-z]+$</span>" <span class="atributes">title</span>="<span class="value">El campo solo acepta letras</span>" <span class="atributes">required</span>&gt;&lt;<span class="keyword">br</span>&gt;<br>  &lt;<span class="keyword">label</span> <span class="atributes">for</span>="<span class="value">usuario</span>"&gt;Password: &lt;/<span class="keyword">label</span>&gt;<br>  &lt;<span class="keyword">input</span> <span class="atributes">type</span>="<span class="value">password</span>" <span class="atributes">name</span>="<span class="value">password</span>" <span class="atributes">id</span>="<span class="value">password</span>" <span class="atributes">placeholder</span>="<span class="value">Escribe tu password</span>" <span class="atributes">required</span>&gt;&lt;<span class="keyword">br</span>&gt;<br>  &lt;<span class="keyword">input</span> <span class="atributes">type</span>="<span class="value">submit</span>"&gt;<br>  &lt;<span class="keyword">input</span> <span class="atributes">type</span>="<span class="value">reset</span>"&gt;<br>&lt;/<span class="keyword">form</span>&gt;</code></pre>
+        </div>
+        <fieldset class="tag_text input_forms">
+          <input type="text" value="jonmircha" readonly disabled><br>
+          <input type="text" placeholder="Escribe tu nombre"><br>
+          <form action="https://jonmircha.com" method="POST" autocomplete="OFF">
+            <label for="usuario">Usuario:</label>
+            <input type="text" name="usuario"id="usuario" placeholder="Escribe tu usuario" pattern="^[A-Za-z]+$" title="El campo solo acepta letras" required><br>
+            <!-- <input type="text" name="email" autocomplete="OFF"> -->
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password" placeholder="Escribe tu password" required><br>
+            <input type="submit">
+            <input type="reset"><br>
+          </form>
+        </fieldset>
+      </div>
+
+      <hr>
+      <div id="tag_select_radio_checkbox" class="tag_select_radio_checkbox">
+        <h2>30. Atributos de Select - Radio - Checkbox. <span class="span-btn">
+          <a class="btn-main" href="#ind-tag_input_forms">Volver al Índice &#x2b06;&#xfe0f;</a>
+        </span></h2>
+        <div class="block-code">
+
+        </div>
+        <fieldset class="tag_text select_radio_checkbox">
+          <form>
+            <p>Elige tu idioma:</p>
+            <select name="idioma" required>
+              <option value="es">Español</option>
+              <option value="en">Inglés</option>
+              <option value="fr">Frances</option>
+              <option value="it">Italiano</option>              
+              <option value="pt">Portugues</option>              
+            </select>
+            <p>Elige tu lenguaje de programación favorito:</p>
+            <input type="radio" name="lenguaje"id="radio-js" value="js" required>
+            <label for="radio-js">Javascript</label>
+            <input type="radio" id="radio-py" id="radio-py" name="lenguaje" value="py" checked>
+            <label for="radio-py">Python</label>
+            <input type="radio" id="radio-php" name="lenguaje" value="php">
+            <label for="radio-php">PHP</label>
+            <p>Elige tus intereses</p>
+            <label><input type="checkbox" name="intereses" value="deportes">Deportes</label>
+            <label><input type="checkbox" name="intereses" value="salud">Salud</label>
+            <label><input type="checkbox" name="intereses" value="finanzas" checked>Finanzas</label>
+            <label><input type="checkbox" name="intereses" value="politica" >Politica</label>
+            <label><input type="checkbox" name="intereses" value="ecologia" >Ecología</label>
+            <p><label><input type="checkbox" name="terminos" required>¿Aceptas los términos y condiciones?</label></p>
+            <input type="submit">
+            <input type="reset">
+          </form>
+        </fieldset>
+      </div>
+
+      <div id="tag_form_contact" class="tag_form_contact">
+        <h2>31. Formulario de Contacto <span class="span-btn">
+          <a class="btn-main" href="#ind-tag_form_contact">Volver al Índice &#x2b06;&#xfe0f;</a>
+        </span></h2>
+        <div class="block-code">
+
+        </div>
+        <fieldset class="tag_text tag_form_contact">
+          <form action="https://formsubmit.co/jonmircha@gmail.com" method="post">
+            <input type="text" name="nombre" placeholder="Escribe tu nombre" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" title="Nombre solo acepta letras espacios en blanco" required><br>
+            <input type="email" name="correo" placeholder="Escribe tu correo" pattern="^(\w+[/./-]?){1,}@[a-z]+[/-]\2{2,}$" title="formato de correo inválido" required><br>
+            <textarea name="comentarios" cols="30" rows="10" required></textarea><br>
+            <input type="submit">
+          </form>
+        </fieldset>
+      </div>
+
+    </section>
+  </main>
+
+</body>
+</html>
